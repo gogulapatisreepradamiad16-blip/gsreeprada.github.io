@@ -39,17 +39,18 @@
         .hero h1 { font-size: clamp(3.5rem, 8vw, 7.5rem); line-height: 0.9; margin-bottom: 30px; letter-spacing: -2px; }
         .hero p { max-width: 750px; font-size: 1.25rem; font-weight: 300; color: #222; line-height: 1.7; }
 
-        /* Parametric Module Pattern Layer - Houses the Isolated Triangular Blocks */
+        /* Distortion-Free Flower of Life Canvas Layer (Derived from flower of life_2.jpg) */
         .pattern-container {
             position: absolute;
             inset: 0;
             z-index: 1;
-            opacity: 0.15;
+            opacity: 0.16;
             pointer-events: none;
-        }
-        .pattern-container svg {
-            width: 100%;
-            height: 100%;
+            /* Encoded SVG vector path grid matching the overlapping circle modules and light tan fills precisely */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='207.84'%3E%3Cdefs%3E%3Cpattern id='fol_matrix' width='120' height='207.84' patternUnits='userSpaceOnUse'%3E%3C!-- Repeating Equilateral Triangular Frame Matrix --%3E%3Cpath d='M60,0 L120,103.92 L60,207.84 L0,103.92 Z M0,0 L120,207.84 M0,207.84 L120,0 M0,103.92 L120,103.92 M60,0 L60,207.84' stroke='%237b5e3b' stroke-width='0.6' fill='none'/%3E%3C!-- Overlapping Curved Flower Profiles with Tan Fills --%3E%3Ccircle cx='60' cy='0' r='69.28' fill='%23ebe4d8' fill-opacity='0.25' stroke='%23111111' stroke-width='0.8'/%3E%3Ccircle cx='0' cy='103.92' r='69.28' fill='%23ebe4d8' fill-opacity='0.25' stroke='%23111111' stroke-width='0.8'/%3E%3Ccircle cx='120' cy='103.92' r='69.28' fill='%23ebe4d8' fill-opacity='0.25' stroke='%23111111' stroke-width='0.8'/%3E%3Ccircle cx='60' cy='207.84' r='69.28' fill='%23ebe4d8' fill-opacity='0.25' stroke='%23111111' stroke-width='0.8'/%3E%3Ccircle cx='60' cy='103.92' r='69.28' fill='none' stroke='%23111111' stroke-width='0.8'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23fol_matrix)'/%3E%3C/svg%3E");
+            background-size: 120px 207.84px;
+            background-repeat: repeat;
+            will-change: transform;
         }
         
         .manifesto-block { max-width: 1100px; margin: 40px 0; border-left: 2px solid var(--accent); padding-left: 40px; }
@@ -102,25 +103,8 @@
     </nav>
 
     <section class="hero">
-        <div class="pattern-container" id="heroPattern">
-            <svg xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="triangularModuleJaali" width="80" height="138.56" patternUnits="userSpaceOnUse">
-                        <g transform="translate(0,0)">
-                            <polygon points="40,0 0,69.28 80,69.28" fill="none" stroke="#7b5e3b" stroke-width="1.2"/>
-                            <path d="M 40,23.1 C 32,36 24,48 16,55 C 28,55 52,55 64,55 C 56,48 48,36 40,23.1 Z" fill="rgba(123,94,59,0.05)" stroke="#7b5e3b" stroke-width="0.85"/>
-                            <line x1="40" y1="0" x2="40" y2="69.28" stroke="#7b5e3b" stroke-width="0.5" stroke-dasharray="2,2"/>
-                        </g>
-                        <g transform="translate(0,69.28)">
-                            <polygon points="0,0 80,0 40,69.28" fill="none" stroke="#7b5e3b" stroke-width="1.2"/>
-                            <path d="M 40,46.18 C 48,33.28 56,21.28 64,14.28 C 52,14.28 28,14.28 16,14.28 C 24,21.28 32,33.28 40,46.18 Z" fill="rgba(123,94,59,0.05)" stroke="#7b5e3b" stroke-width="0.85"/>
-                            <line x1="40" y1="0" x2="40" y2="69.28" stroke="#7b5e3b" stroke-width="0.5" stroke-dasharray="2,2"/>
-                        </g>
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#triangularModuleJaali)" />
-            </svg>
-        </div>
+        <!-- Securely encoded blueprint pattern container -->
+        <div class="pattern-container" id="heroPattern"></div>
         
         <div class="hero-content">
             <div class="label" style="margin-bottom: 20px;">Interior Designer + Environmental Design Researcher + Educator</div>
@@ -132,7 +116,7 @@
     <section style="background: var(--white); border-top: 1px solid rgba(0,0,0,0.05);">
         <div class="manifesto-block">
             <div class="manifesto-text">
-                "Investigating how vernacular intelligence, environmental performance, and craft knowledge can inform contemporary design through research, making, and teaching."
+                "Investigating how vernacular intelligence, environmental performance, and craft knowledge can inform contemporary design through research, making, and teaching."[cite: 5]
             </div>
         </div>
     </section>
@@ -150,7 +134,7 @@
             <div class="editorial-text-pane">
                 <div class="label">Flagship Project 01 // Patent Ref: IIT Hyderabad</div>
                 <h3>The Modular Interlocking Jaali System</h3>
-                <p>Framing a tool-free, self-supporting architectural lattice utilizing mathematically defined triangular modules. Re-engineering vernacular screens into high-performance, contemporary parametric assemblies.</p>
+                <p>Framing a tool-free, self-supporting architectural lattice utilizing mathematically defined triangular modules[cite: 6]. Re-engineering vernacular screens into high-performance, contemporary parametric assemblies[cite: 6, 7].</p>
                 <a href="research.html#jaali" class="text-link">Explore Patent Architecture</a>
             </div>
         </div>
@@ -162,7 +146,7 @@
             <div class="editorial-text-pane" style="direction: ltr;">
                 <div class="label">Flagship Project 02 // Empirical Model</div>
                 <h3>Quantifying Jaali Geometry vs. Daylight Factor</h3>
-                <p>Deploying formal regression mathematical formulae to calculate specific solid-to-void ratios, balancing absolute glare reduction with real-world Daylight Factors (DF).</p>
+                <p>Deploying formal regression mathematical formulae to calculate specific solid-to-void ratios, balancing absolute glare reduction with real-world Daylight Factors (DF)[cite: 12].</p>
                 <a href="research.html#energy" class="text-link">Examine Empirical Data</a>
             </div>
         </div>
@@ -187,7 +171,7 @@
                 <div class="timeline-meta">Master's Degree</div>
                 <div class="timeline-detail">
                     <h4>Master of Interior Architecture &amp; Design</h4>
-                    <p>Focused on environmental performance metrics, passive solar optimization strategies, and energy auditing protocols.</p>
+                    <p>Focused on environmental performance metrics, passive solar optimization strategies, and energy auditing protocols[cite: 12].</p>
                 </div>
             </div>
             <div class="timeline-row">
@@ -206,11 +190,11 @@
     </footer>
 
     <script>
-        // Smooth scroll displacement handling the vector structural pattern seamlessly
+        // Smooth parallax scroll calculation moving the crisp SVG layer behind text boundaries seamlessly
         window.addEventListener("scroll", () => {
             const patternContainer = document.getElementById("heroPattern");
-            let offset = window.scrollY * 0.2;
-            patternContainer.style.transform = `translateY(${offset}px)`;
+            let offset = window.scrollY * 0.15;
+            patternContainer.style.backgroundPosition = `0px ${offset}px`;
         });
     </script>
 </body>
