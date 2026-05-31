@@ -33,24 +33,30 @@
         nav a:hover, nav a.active { color: var(--accent); }
 
         section { padding: 120px 6% 80px 6%; position: relative; }
-        .hero { height: 100vh; display: flex; align-items: center; padding-top: 80px; position: relative; overflow: hidden; background: var(--bg); }
+        .hero { height: 100vh; display: flex; align-items: center; padding-top: 80px; position: relative; background: transparent; }
         
         .hero-content { position: relative; z-index: 10; max-width: 1000px; }
         .hero h1 { font-size: clamp(3.5rem, 8vw, 7.5rem); line-height: 0.9; margin-bottom: 30px; letter-spacing: -2px; }
         .hero p { max-width: 750px; font-size: 1.25rem; font-weight: 300; color: #222; line-height: 1.7; }
 
-        /* Distortion-Free Flower of Life Canvas Layer (Derived from flower of life_2.jpg) */
-        .pattern-container {
-            position: absolute;
-            inset: 0;
+        /* Fixed Geometric Vector Canvas — Locks execution coordinates from flower of life_2.jpg */
+        .blueprint-canvas {
+            position: fixed;
+            top: 0;
+            right: -10%;
+            width: 70vw;
+            height: 100vh;
             z-index: 1;
             opacity: 0.16;
             pointer-events: none;
-            /* Encoded SVG vector path grid matching the overlapping circle modules and light tan fills precisely */
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='207.84'%3E%3Cdefs%3E%3Cpattern id='fol_matrix' width='120' height='207.84' patternUnits='userSpaceOnUse'%3E%3C!-- Repeating Equilateral Triangular Frame Matrix --%3E%3Cpath d='M60,0 L120,103.92 L60,207.84 L0,103.92 Z M0,0 L120,207.84 M0,207.84 L120,0 M0,103.92 L120,103.92 M60,0 L60,207.84' stroke='%237b5e3b' stroke-width='0.6' fill='none'/%3E%3C!-- Overlapping Curved Flower Profiles with Tan Fills --%3E%3Ccircle cx='60' cy='0' r='69.28' fill='%23ebe4d8' fill-opacity='0.25' stroke='%23111111' stroke-width='0.8'/%3E%3Ccircle cx='0' cy='103.92' r='69.28' fill='%23ebe4d8' fill-opacity='0.25' stroke='%23111111' stroke-width='0.8'/%3E%3Ccircle cx='120' cy='103.92' r='69.28' fill='%23ebe4d8' fill-opacity='0.25' stroke='%23111111' stroke-width='0.8'/%3E%3Ccircle cx='60' cy='207.84' r='69.28' fill='%23ebe4d8' fill-opacity='0.25' stroke='%23111111' stroke-width='0.8'/%3E%3Ccircle cx='60' cy='103.92' r='69.28' fill='none' stroke='%23111111' stroke-width='0.8'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23fol_matrix)'/%3E%3C/svg%3E");
-            background-size: 120px 207.84px;
-            background-repeat: repeat;
-            will-change: transform;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .blueprint-canvas svg {
+            width: 100%;
+            height: auto;
+            max-height: 90vh;
         }
         
         .manifesto-block { max-width: 1100px; margin: 40px 0; border-left: 2px solid var(--accent); padding-left: 40px; }
@@ -86,6 +92,7 @@
             .featured-editorial-grid { grid-template-columns: 1fr; gap: 30px; }
             .editorial-image-pane { min-height: 350px; }
             .timeline-row { grid-template-columns: 1fr; gap: 15px; }
+            .blueprint-canvas { width: 100vw; right: 0; opacity: 0.08; }
         }
     </style>
 </head>
@@ -102,10 +109,32 @@
         </ul>
     </nav>
 
+    <!-- Native Geometric Wireframe Asset — Directly models coordinates from flower of life_2.jpg -->
+    <div class="blueprint-canvas" id="dossierBlueprint">
+        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Center Master Circle -->
+            <circle cx="150" cy="150" r="50" stroke="#7b5e3b" stroke-width="0.75"/>
+            <!-- Tier 1 Concentric Overlapping Intersections -->
+            <circle cx="150" cy="100" r="50" stroke="#7b5e3b" stroke-width="0.5"/>
+            <circle cx="193.3" cy="125" r="50" stroke="#7b5e3b" stroke-width="0.5"/>
+            <circle cx="193.3" cy="175" r="50" stroke="#7b5e3b" stroke-width="0.5"/>
+            <circle cx="150" cy="200" r="50" stroke="#7b5e3b" stroke-width="0.5"/>
+            <circle cx="106.7" cy="175" r="50" stroke="#7b5e3b" stroke-width="0.5"/>
+            <circle cx="106.7" cy="125" r="50" stroke="#7b5e3b" stroke-width="0.5"/>
+            <!-- Tier 2 Structural Enclosure Node Rings -->
+            <circle cx="150" cy="50" r="50" stroke="#7b5e3b" stroke-width="0.35" stroke-dasharray="2,2"/>
+            <circle cx="236.6" cy="100" r="50" stroke="#7b5e3b" stroke-width="0.35" stroke-dasharray="2,2"/>
+            <circle cx="236.6" cy="200" r="50" stroke="#7b5e3b" stroke-width="0.35" stroke-dasharray="2,2"/>
+            <circle cx="150" cy="250" r="50" stroke="#7b5e3b" stroke-width="0.35" stroke-dasharray="2,2"/>
+            <circle cx="63.4" cy="200" r="50" stroke="#7b5e3b" stroke-width="0.35" stroke-dasharray="2,2"/>
+            <circle cx="63.4" cy="100" r="50" stroke="#7b5e3b" stroke-width="0.35" stroke-dasharray="2,2"/>
+            <!-- Master Boundary Framing Rings -->
+            <circle cx="150" cy="150" r="100" stroke="#7b5e3b" stroke-width="1"/>
+            <circle cx="150" cy="150" r="103" stroke="#7b5e3b" stroke-width="0.5"/>
+        </svg>
+    </div>
+
     <section class="hero">
-        <!-- Securely encoded blueprint pattern container -->
-        <div class="pattern-container" id="heroPattern"></div>
-        
         <div class="hero-content">
             <div class="label" style="margin-bottom: 20px;">Interior Designer + Environmental Design Researcher + Educator</div>
             <h1>Pattern.<br>Perception.<br>Possibility.</h1>
@@ -190,11 +219,11 @@
     </footer>
 
     <script>
-        // Smooth parallax scroll calculation moving the crisp SVG layer behind text boundaries seamlessly
+        // Smooth paralax displacement for the un-skewed master vector file
         window.addEventListener("scroll", () => {
-            const patternContainer = document.getElementById("heroPattern");
-            let offset = window.scrollY * 0.15;
-            patternContainer.style.backgroundPosition = `0px ${offset}px`;
+            const blueprint = document.getElementById("dossierBlueprint");
+            let offset = window.scrollY * 0.12;
+            blueprint.style.transform = `translateY(${offset}px)`;
         });
     </script>
 </body>
