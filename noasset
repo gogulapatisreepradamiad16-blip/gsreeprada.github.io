@@ -1,0 +1,72 @@
+Replace your entire:
+
+<div class="hero-pattern"></div>
+
+with:
+
+<div class="hero-pattern">
+<svg viewBox="0 0 1200 800" preserveAspectRatio="none">
+    <defs>
+        <pattern id="flowerOfLife" width="180" height="156" patternUnits="userSpaceOnUse">
+
+            <g fill="none"
+               stroke="#7b5e3b"
+               stroke-width="0.8"
+               opacity="0.25">
+
+                <!-- Center -->
+                <circle cx="90" cy="78" r="45"/>
+
+                <!-- First Ring -->
+                <circle cx="45" cy="78" r="45"/>
+                <circle cx="135" cy="78" r="45"/>
+
+                <circle cx="67.5" cy="39" r="45"/>
+                <circle cx="112.5" cy="39" r="45"/>
+
+                <circle cx="67.5" cy="117" r="45"/>
+                <circle cx="112.5" cy="117" r="45"/>
+
+                <!-- Outer Ring -->
+                <circle cx="0" cy="78" r="45"/>
+                <circle cx="180" cy="78" r="45"/>
+
+                <circle cx="22.5" cy="39" r="45"/>
+                <circle cx="157.5" cy="39" r="45"/>
+
+                <circle cx="22.5" cy="117" r="45"/>
+                <circle cx="157.5" cy="117" r="45"/>
+
+            </g>
+        </pattern>
+    </defs>
+
+    <rect width="100%" height="100%" fill="url(#flowerOfLife)"/>
+</svg>
+</div>
+
+Then replace your .hero-pattern CSS with:
+
+.hero-pattern{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    opacity:0.18;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.hero-pattern svg{
+    width:100%;
+    height:100%;
+}
+
+If you want something closer to the Flower of Life image you attached (denser and more accurate), use this opacity:
+
+opacity:0.12;
+
+and:
+
+stroke-width:1;
+
+inside the SVG.
