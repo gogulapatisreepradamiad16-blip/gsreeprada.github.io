@@ -33,21 +33,30 @@
         nav a:hover, nav a.active { color: var(--accent); }
 
         section { padding: 120px 6% 80px 6%; position: relative; }
-        .hero { height: 100vh; display: flex; align-items: center; padding-top: 80px; position: relative; overflow: hidden; }
         
-        /* Base64 Embedded Background Matrix Profile */
-        .jaali-matrix {
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            padding-top: 80px; 
+            position: relative; 
+            overflow: hidden;
+        }
+        
+        /* Fixed Inline SVG Layer Container */
+        .hero-pattern {
             position: absolute;
             inset: 0;
-            pointer-events: none;
-            opacity: 0.12;
             z-index: 1;
+            opacity: 0.12;
+            pointer-events: none;
+            overflow: hidden;
+        }
 
-            /* PASTE YOUR GENERATED BASE64 STRING ENTIRELY INSIDE THE url() BLOCK BELOW */
-            background-image: url("data:image/png;base64,PUT_YOUR_BASE64_STRING_HERE");
-            background-repeat: repeat;
-            background-size: 320px auto;
-            background-position: center center;
+        .hero-pattern svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         .hero-content { position: relative; z-index: 10; max-width: 1000px; }
@@ -104,7 +113,35 @@
     </nav>
 
     <section class="hero">
-        <div class="jaali-matrix" id="animatedJaali"></div>
+        <div class="hero-pattern">
+            <svg viewBox="0 0 1200 800" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="flowerOfLife" width="180" height="155.885" patternUnits="userSpaceOnUse">
+                        <g fill="none" stroke="#7b5e3b" stroke-width="0.8" opacity="0.4">
+                            <circle cx="0" cy="0" r="60"/>
+                            <circle cx="60" cy="0" r="60"/>
+                            <circle cx="120" cy="0" r="60"/>
+                            <circle cx="180" cy="0" r="60"/>
+
+                            <circle cx="30" cy="51.962" r="60"/>
+                            <circle cx="90" cy="51.962" r="60"/>
+                            <circle cx="150" cy="51.962" r="60"/>
+
+                            <circle cx="0" cy="103.923" r="60"/>
+                            <circle cx="60" cy="103.923" r="60"/>
+                            <circle cx="120" cy="103.923" r="60"/>
+                            <circle cx="180" cy="103.923" r="60"/>
+
+                            <circle cx="30" cy="155.885" r="60"/>
+                            <circle cx="90" cy="155.885" r="60"/>
+                            <circle cx="150" cy="155.885" r="60"/>
+                        </g>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#flowerOfLife)"/>
+            </svg>
+        </div>
+
         <div class="hero-content">
             <div class="label" style="margin-bottom: 20px;">Interior Designer + Environmental Design Researcher + Educator</div>
             <h1>Pattern.<br>Perception.<br>Possibility.</h1>
@@ -187,15 +224,5 @@
     <footer>
         &copy; 2026 Sreeprada Goguapati. Constructed for Faculty Appointment Review.
     </footer>
-
-    <script>
-        window.addEventListener("scroll", () => {
-            const pattern = document.getElementById("animatedJaali");
-            let offset = window.scrollY * 0.15;
-
-            pattern.style.backgroundPosition =
-                `center ${offset}px`;
-        });
-    </script>
 </body>
 </html>
