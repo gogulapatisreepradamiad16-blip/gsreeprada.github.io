@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV & Contact | Sreeprada Goguapati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #f8f5ef; --text: #111111; --accent: #7b5e3b; --light: #ebe4d8; --white: #ffffff; --font-heading: 'Cormorant Garamond', serif; --font-body: 'Inter', sans-serif; --font-label: 'Space Grotesk', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; }
+        h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; }
+        .label { font-family: var(--font-label); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
+        
+        nav { position: fixed; top: 0; width: 100%; padding: 25px 6%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; backdrop-filter: blur(12px); background: rgba(248, 245, 239, 0.85); border-bottom: 1px solid rgba(0,0,0,0.03); }
+        .logo { font-family: var(--font-label); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; color: var(--text); }
+        nav ul { display: flex; gap: 35px; list-style: none; }
+        nav a { text-decoration: none; color: var(--text); font-size: 13px; letter-spacing: 1px; font-family: var(--font-label); text-transform: uppercase; }
+        nav a.active { color: var(--accent); font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 160px auto 100px auto; padding: 0 4%; }
+        .split-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; margin-top: 50px; }
+        
+        .contact-header h1 { font-size: 4rem; margin-bottom: 25px; line-height: 1.1; }
+        .contact-header p { font-size: 1.15rem; color: #333; font-weight: 300; }
+        
+        .cv-download-card { background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 40px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: fit-content; }
+        .cv-btn { display: inline-block; background: var(--accent); color: white; text-decoration: none; font-family: var(--font-label); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; padding: 18px 32px; margin-top: 20px; transition: background 0.3s; }
+        .cv-btn:hover { background: #5f472b; }
+        
+        .registry-links { list-style: none; margin-top: 30px; }
+        .registry-links li { padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+        .registry-links a { color: var(--text); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .registry-links a:hover { color: var(--accent); }
+
+        @media(max-width: 800px) {
+            .split-layout { grid-template-columns: 1fr; gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Sreeprada Goguapati</a>
+        <ul>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="contact.html" class="active">CV / Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="split-layout">
+            
+            <div class="contact-header">
+                <span class="label">Institutional Communications</span>
+                <h1>Academic Outreach</h1>
+                <p>Open to institutional reviews, panel discussions, and collaborative research inquiries regarding advanced sustainable design placements.</p>
+                
+                <ul class="registry-links">
+                    <li><span>Academic Communication</span> <a href="mailto:md20resch11001@iith.ac.in">md20resch11001@iith.ac.in</a></li>
+                    <li><span>ORCID Identifier</span> <a href="#">Distinguished Scholar Record</a></li>
+                    <li><span>Google Scholar Terminal</span> <a href="#">Citation Metrics Matrix</a></li>
+                </ul>
+            </div>
+
+            <div class="cv-download-card">
+                <span class="label">Full Dossier</span>
+                <h3 style="font-family: var(--font-heading); font-size: 2rem; margin: 10px 0;">Curriculum Vitae</h3>
+                <p style="font-size: 0.9rem; color: #555; max-width: 280px; margin: auto;">Comprehensive breakdown of patent applications, peer-reviewed records, design studio teaching reviews, and practical industry experience.</p>
+                <a href="assets/cv/Sreeprada_Goguapati_CV.pdf" class="cv-btn" download>Download Academic CV</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
