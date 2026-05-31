@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Portfolio | Sreeprada Goguapati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #f8f5ef; --text: #111111; --accent: #7b5e3b; --light: #ebe4d8; --white: #ffffff; --font-heading: 'Cormorant Garamond', serif; --font-body: 'Inter', sans-serif; --font-label: 'Space Grotesk', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; }
+        h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; }
+        .label { font-family: var(--font-label); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
+        
+        nav { position: fixed; top: 0; width: 100%; padding: 25px 6%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; backdrop-filter: blur(12px); background: rgba(248, 245, 239, 0.85); border-bottom: 1px solid rgba(0,0,0,0.03); }
+        .logo { font-family: var(--font-label); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; color: var(--text); }
+        nav ul { display: flex; gap: 35px; list-style: none; }
+        nav a { text-decoration: none; color: var(--text); font-size: 13px; letter-spacing: 1px; font-family: var(--font-label); text-transform: uppercase; }
+        nav a.active { color: var(--accent); font-weight: 500; }
+
+        .container { max-width: 1200px; margin: 160px auto 100px auto; padding: 0 4%; }
+        .page-intro { margin-bottom: 80px; max-width: 850px; }
+        .page-intro h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.1; }
+        .page-intro p { font-size: 1.25rem; color: #333; font-weight: 300; }
+
+        .research-entry { background: var(--white); border: 1px solid rgba(0,0,0,0.05); padding: 60px; margin-bottom: 60px; scroll-margin-top: 120px; }
+        .research-entry h2 { font-size: 3rem; margin-bottom: 25px; line-height: 1.1; }
+        
+        .methodology-matrix { display: grid; grid-template-columns: 7.5fr 2.5fr; gap: 50px; margin-top: 40px; }
+        .methodology-core { border-right: 1px solid rgba(0,0,0,0.08); padding-right: 40px; }
+        .methodology-sidebar { background: var(--bg); padding: 30px; height: fit-content; }
+        
+        .process-pill-group { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+        .process-pill { font-family: var(--font-label); font-size: 11px; background: var(--light); padding: 4px 12px; color: var(--text); }
+
+        .ratio-indicator { display: flex; height: 6px; width: 100%; background: #ddd; margin: 25px 0 10px 0; }
+        .ratio-70 { width: 70%; background: var(--accent); }
+        .ratio-20 { width: 20%; background: #a49177; }
+        .ratio-10 { width: 10%; background: var(--text); }
+        .ratio-legend { font-family: var(--font-label); font-size: 10px; color: #666; display: flex; justify-content: space-between; }
+
+        .asset-wrapper { width: 100%; margin: 30px 0; border: 1px solid rgba(0,0,0,0.08); background: var(--bg); overflow: hidden; }
+        .asset-wrapper img { width: 100%; height: auto; display: block; }
+        .asset-caption { font-family: var(--font-label); font-size: 11px; color: #555; padding: 12px; background: var(--white); border-top: 1px solid rgba(0,0,0,0.05); line-height: 1.4; }
+        
+        blockquote { font-family: var(--font-heading); font-style: italic; font-size: 1.35rem; margin: 30px 0; padding-left: 25px; border-left: 3px solid var(--accent); color: #444; }
+        h3 { font-size: 1.8rem; margin: 25px 0 12px 0; color: var(--text); }
+        p { color: #333; margin-bottom: 15px; text-align: justify; }
+
+        @media(max-width: 900px) {
+            .methodology-matrix { grid-template-columns: 1fr; gap: 30px; }
+            .methodology-core { border-right: none; padding-right: 0; }
+            .research-entry { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Sreeprada Goguapati</a>
+        <ul>
+            <li><a href="research.html" class="active">Research</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="contact.html">CV / Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="page-intro">
+            <span class="label">Research Through Design Framework</span>
+            <h1>Research &amp; Intellectual Property Portfolio</h1>
+            <p>Bridging the gap between empirical building science equations and architectural physical prototyping loops. Powered by patent-tracked modular discoveries and rigorous computational workflows.</p>
+        </div>
+
+        <div class="research-entry" id="jaali">
+            <span class="label">Flagship Project 01 // Patent Specification</span>
+            <h2>A Modular Architectural Screen System</h2>
+            
+            <div class="process-pill-group">
+                <span class="process-pill">Vernacular Intelligence</span>
+                <span class="process-pill">Tool-Free Interlocking</span>
+                <span class="process-pill">Parametric Solid-to-Void</span>
+                <span class="process-pill">Craft-Computation</span>
+            </div>
+
+            <div class="ratio-indicator"><div class="ratio-70"></div><div class="ratio-20"></div><div class="ratio-10"></div></div>
+            <div class="ratio-legend"><span>70% Process / Computational Iterations</span><span>20% Geometry Diagrams</span><span>10% Prototype Outcomes</span></div>
+
+            <div class="methodology-matrix">
+                <div class="methodology-core">
+                    <h3>Context &amp; Theoretical Grounding</h3>
+                    <p>Traditional structural facades operate statically, often failing to adapt to fluctuating microclimatic factors. This registered system abstracts the "Flower of Life" geometry into scalable modular building lattices. Each polygonal block features mathematically derived curved voids designed to adapt safely to external environments without separate framework components.</p>
+                    
+                    <h3>The Tectonic Workflow &amp; Prototyping Cycles</h3>
+                    <p>The manufacturing process bridges digital scripting with advanced CNC milling and casting workflows. To make the assemblies strong yet lightweight, a 3-layer sandwich joint system was created to build continuous, frameless structural lattices across variable geometric thicknesses (ranging from small 2mm acrylic components up to large 20mm timber architectural panels).</p>
+                    
+                    <div class="asset-wrapper">
+                        <img src="assets/images/Sreeprada_Window (01).jpg" alt="Frameless Tool-Free Interlocking Triangular Lattice Core Prototype">
+                        <div class="asset-caption"><strong>Fig 1.1:</strong> Physical mockup detailing alternating edge protrusions and recesses that enable secure, frameless interlocking structural stability.</div>
+                    </div>
+
+                    <h3>Dissemination Context: Exhibition Realization</h3>
+                    <p>This design methodology was physically validated through an academic presentation track:</p>
+                    <blockquote>
+                        <strong>Sub-Section Entry // Modulating Light and Form Exhibition</strong><br>
+                        A cross-disciplinary layout testing physical modules under active ambient sunlight. This framework establishes visual metrics for glare limitation, physical privacy control, and cross-ventilation balancing without relying on commercial hardware components.
+                    </blockquote>
+                </div>
+                
+                <div class="methodology-sidebar">
+                    <h4 class="label" style="margin-bottom:15px;">System Matrix</h4>
+                    <p style="font-size: 0.85rem; color:#444; line-height: 1.8;">
+                        • Frameless Interlocking<br>
+                        • Alternating Protrusions<br>
+                        • Multi-Layer Sandwiching<br>
+                        • CNC Slot/Groove Passes<br>
+                        • Vertical &amp; Y-Shaped Slits<br>
+                        • Kumiko Pattern Paths
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-entry" id="energy">
+            <span class="label">Flagship Project 02 // Empirical Modeling</span>
+            <h2>Quantifying Jaali Geometry Relationships with Daylight Factor (DF)</h2>
+            
+            <div class="process-pill-group">
+                <span class="process-pill">Environmental Performance</span>
+                <span class="process-pill">Regression Formulae</span>
+                <span class="process-pill">Passive Solar Shading</span>
+                <span class="process-pill">Building Energy Audit</span>
+            </div>
+
+            <div class="ratio-indicator"><div class="ratio-70"></div><div class="ratio-20"></div><div class="ratio-10"></div></div>
+            <div class="ratio-legend"><span>70% Mathematical Modeling</span><span>20% Regression Graphs</span><span>10% Envelope Metrics</span></div>
+
+            <div class="methodology-matrix">
+                <div class="methodology-core">
+                    <p>This project approaches building physics through strict **Environmental Design Research** rather than aesthetic styling. It explicitly charts modern glass curtain wall deficiencies (which trigger heavy reliance on mechanical cooling and interior blinds) against mathematically managed solar control facades.</p>
+                    
+                    <div class="asset-wrapper">
+                        <img src="assets/images/reeprada_Window(02).jpg" alt="Daylight Factor Simulation Chart Matrix">
+                        <div class="asset-caption"><strong>Fig 2.1:</strong> Simulation performance graph demonstrating calculation of solid-to-void percentages against climate boundaries.</div>
+                    </div>
+
+                    <h3>The Empirical Workflow</h3>
+                    <p>By extracting specific regression equations, architects can calculate the exact solid-to-void percentages needed to achieve a targeted target Daylight Factor (DF) inside interior rooms. This system balances absolute glare protection with natural airflow parameters, transforming traditional craft principles into highly predictable, energy-saving facade applications.</p>
+                </div>
+                
+                <div class="methodology-sidebar">
+                    <h4 class="label" style="margin-bottom:15px;">Calculated Limits</h4>
+                    <p style="font-size: 0.85rem; color:#444; line-height: 1.7;">
+                        • Base: CEPT MIAD Spec<br>
+                        • Target: Solar Heat Gain Coefficient Reduction<br>
+                        • Method: Regression Matrix Formulae
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-entry" id="flexure-casting">
+            <span class="label">Secondary IP Track // Patent Specification</span>
+            <h2>Dynamic Gear Actuated Flexure Casting Infrastructure</h2>
+            <p style="margin-top:15px;">A specialized innovation focused on making continuous, dynamic adjustments to casting material void ratios. This system deploys a modular outer shell made of 6061-T6 aluminum alloy that houses a set of identical flexure walls arranged in an equilateral triangular configuration.</p>
+            <p>Controlled via a master bevel gear assembly linked to linear lead screw actuators, the 2mm AISI 1095 spring-steel flexure walls deform precisely inward or outward. Coated with Polytetrafluoroethylene (PTFE) for complete chemical compatibility, this infrastructure allows engineers to cast custom architectural screen panels with variable solid-to-void gradients using a single, adjustable mold system.</p>
+        </div>
+
+        <div class="research-entry" id="kondapalli">
+            <span class="label">Inquiry Area 04 // Craft Collaboration</span>
+            <h2>Kondapalli Co-Design Pipelines &amp; Heritage Futures</h2>
+            <p style="margin-top:15px;">A field research project mapping artisan toy manufacturing ecosystems. This methodology pairs traditional woodturning craft processes with precise digital drafting setups, developing new product lines that protect heritage value while utilizing sustainable material loops.</p>
+            <div class="asset-wrapper">
+                <img src="assets/images/pic01.jpg" alt="Onsite Craft Workspace Documentation">
+                <div class="asset-caption"><strong>Fig 4.1:</strong> Hands-on workshop mapping, tool configuration metrics, and sustainable wood turning optimization sequences.</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
