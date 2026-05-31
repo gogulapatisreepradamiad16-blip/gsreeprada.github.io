@@ -33,35 +33,26 @@
         nav a:hover, nav a.active { color: var(--accent); }
 
         section { padding: 120px 6% 80px 6%; position: relative; }
+        .hero { height: 100vh; display: flex; align-items: center; padding-top: 80px; position: relative; overflow: hidden; }
         
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-            position: relative;
-            overflow: hidden;
-            background: transparent;
-        }
-
-        .hero-pattern {
+        /* Base64 Embedded Background Matrix Profile */
+        .jaali-matrix {
             position: absolute;
             inset: 0;
+            pointer-events: none;
+            opacity: 0.12;
             z-index: 1;
 
-            background-image: url("assets/images/flower-of-life.png");
+            /* PASTE YOUR GENERATED BASE64 STRING ENTIRELY INSIDE THE url() BLOCK BELOW */
+            background-image: url("data:image/png;base64,PUT_YOUR_BASE64_STRING_HERE");
             background-repeat: repeat;
-            background-size: 320px;
-
-            opacity: 0.10;
-            pointer-events: none;
+            background-size: 320px auto;
+            background-position: center center;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 1000px;
-        }
+        .hero-content { position: relative; z-index: 10; max-width: 1000px; }
+        .hero h1 { font-size: clamp(3.5rem, 8vw, 7.5rem); line-height: 0.9; margin-bottom: 30px; letter-spacing: -2px; }
+        .hero p { max-width: 750px; font-size: 1.25rem; font-weight: 300; color: #222; line-height: 1.7; }
         
         .manifesto-block { max-width: 1100px; margin: 40px 0; border-left: 2px solid var(--accent); padding-left: 40px; }
         .manifesto-text { font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1.3; color: var(--text); font-style: italic; }
@@ -69,7 +60,7 @@
         .section-header { border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 20px; margin-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-end; }
         .section-header h2 { font-size: 2.8rem; }
         
-        .featured-editorial-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; margin-bottom: 100px; align-items: center; position: relative; z-index: 5; }
+        .featured-editorial-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; margin-bottom: 100px; align-items: center; }
         .editorial-image-pane { background: var(--light); min-height: 480px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); }
         .editorial-image-pane img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
         .editorial-text-pane { padding: 20px 0; }
@@ -80,14 +71,14 @@
         .text-link:hover { color: var(--accent); }
         .text-link::after { content: " →"; }
 
-        .timeline-container { margin-top: 40px; position: relative; z-index: 5; }
+        .timeline-container { margin-top: 40px; }
         .timeline-row { display: grid; grid-template-columns: 150px 1fr 2fr; padding: 35px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
         .timeline-year { font-size: 2rem; font-family: var(--font-heading); color: var(--accent); line-height: 1; }
         .timeline-meta { font-family: var(--font-label); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; padding-top: 8px; }
         .timeline-detail h4 { font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 5px; font-weight: 500; }
         .timeline-detail p { color: #555; font-size: 0.95rem; }
 
-        footer { padding: 60px 6%; border-top: 1px solid rgba(0,0,0,0.05); text-align: center; font-family: var(--font-label); font-size: 12px; letter-spacing: 1px; color: #666; position: relative; z-index: 5; }
+        footer { padding: 60px 6%; border-top: 1px solid rgba(0,0,0,0.05); text-align: center; font-family: var(--font-label); font-size: 12px; letter-spacing: 1px; color: #666; }
 
         @media(max-width: 960px) {
             nav { padding: 20px 4%; }
@@ -113,9 +104,7 @@
     </nav>
 
     <section class="hero">
-        <!-- Local Static Image Asset Integration Layer -->
-        <div class="hero-pattern"></div>
-        
+        <div class="jaali-matrix" id="animatedJaali"></div>
         <div class="hero-content">
             <div class="label" style="margin-bottom: 20px;">Interior Designer + Environmental Design Researcher + Educator</div>
             <h1>Pattern.<br>Perception.<br>Possibility.</h1>
@@ -139,7 +128,7 @@
 
         <div class="featured-editorial-grid">
             <div class="editorial-image-pane">
-                <img src="assets/images/Sreeprada_Window (01).jpg" alt="Modular Architectural Interlocking Lattice Structural Mockup">
+                <img src="assets/images/Sreeprada_Window (01).jpg" alt="Modular Architectural Lattice Detail">
             </div>
             <div class="editorial-text-pane">
                 <div class="label">Flagship Project 01 // Patent Ref: IIT Hyderabad</div>
@@ -151,7 +140,7 @@
 
         <div class="featured-editorial-grid" style="direction: rtl;">
             <div class="editorial-image-pane">
-                <img src="assets/images/Sreeprada_Window (02).jpg" alt="Daylight Factor Model Simulation Calibration Map">
+                <img src="assets/images/Sreeprada_Window (02).jpg" alt="Daylight Factor Calculation Metrics Graph">
             </div>
             <div class="editorial-text-pane" style="direction: ltr;">
                 <div class="label">Flagship Project 02 // Empirical Model</div>
@@ -198,5 +187,15 @@
     <footer>
         &copy; 2026 Sreeprada Goguapati. Constructed for Faculty Appointment Review.
     </footer>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            const pattern = document.getElementById("animatedJaali");
+            let offset = window.scrollY * 0.15;
+
+            pattern.style.backgroundPosition =
+                `center ${offset}px`;
+        });
+    </script>
 </body>
 </html>
