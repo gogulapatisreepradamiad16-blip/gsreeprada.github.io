@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedagogy & Teaching | Sreeprada Goguapati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #f8f5ef; --text: #111111; --accent: #7b5e3b; --light: #ebe4d8; --white: #ffffff; --font-heading: 'Cormorant Garamond', serif; --font-body: 'Inter', sans-serif; --font-label: 'Space Grotesk', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; }
+        h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; }
+        .label { font-family: var(--font-label); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
+        
+        nav { position: fixed; top: 0; width: 100%; padding: 25px 6%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; backdrop-filter: blur(12px); background: rgba(248, 245, 239, 0.85); border-bottom: 1px solid rgba(0,0,0,0.03); }
+        .logo { font-family: var(--font-label); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; color: var(--text); }
+        nav ul { display: flex; gap: 35px; list-style: none; }
+        nav a { text-decoration: none; color: var(--text); font-size: 13px; letter-spacing: 1px; font-family: var(--font-label); text-transform: uppercase; }
+        nav a.active { color: var(--accent); font-weight: 500; }
+
+        .container { max-width: 1000px; margin: 160px auto 100px auto; padding: 0 4%; }
+        .page-intro { margin-bottom: 60px; }
+        .page-intro h1 { font-size: 4rem; }
+        
+        .pedagogy-block { background: var(--white); padding: 50px; border: 1px solid rgba(0,0,0,0.04); margin-bottom: 40px; }
+        .pedagogy-block h2 { font-size: 2.2rem; margin-bottom: 20px; }
+        .pedagogy-block p { color: #222; margin-bottom: 20px; font-size: 1.05rem; text-align: justify; }
+        
+        .studio-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 35px; }
+        .pillar-item { background: var(--bg); padding: 25px; border-top: 2px solid var(--accent); }
+        .pillar-item h4 { font-family: var(--font-label); text-transform: uppercase; font-size: 11px; margin-bottom: 10px; color: var(--accent); }
+        .pillar-item p { font-size: 0.88rem; color: #444; margin-bottom: 0; line-height: 1.5; }
+
+        @media(max-width: 750px) {
+            .studio-pillar-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Sreeprada Goguapati</a>
+        <ul>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="teaching.html" class="active">Teaching</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="contact.html">CV / Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="page-intro">
+            <span class="label">Studio Pedagogy Philosophy</span>
+            <h1>Teaching &amp; Curriculum Design</h1>
+        </div>
+
+        <div class="pedagogy-block">
+            <h2>The Design Studio as an Empirical Testing Ground</h2>
+            <p>My teaching philosophy coordinates foundational design principles directly with data-driven construction metrics. Moving past purely visual configurations, I guide students to run design studios as research platforms—where hands-on making, material prototyping loops, and parametric equations help validate spatial performance.</p>
+            
+            <div class="studio-pillar-grid">
+                <div class="pillar-item">
+                    <h4>01 // Thinking Through Hands</h4>
+                    <p>Encouraging deep material testing through model making, physical joints, and tangible structural iterations.</p>
+                </div>
+                <div class="pillar-item">
+                    <h4>02 // Computational Logic</h4>
+                    <p>Integrating parametric scripting, geometric modulation, and modular system logic into undergraduate studio tracks.</p>
+                </div>
+                <div class="pillar-item">
+                    <h4>03 // Building Performance</h4>
+                    <p>Teaching design students to run empirical simulations, solid-to-void indexing, and energy audit analysis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pedagogy-block">
+            <h2>Course Competencies &amp; Studio Direction</h2>
+            <p>Prepared to lead core design courses at top-tier design schools and universities:</p>
+            <p style="font-size: 0.98rem; color: #333; line-height: 1.8;">
+                • <strong>Spatial Architecture Tracks:</strong> Advanced Interior Design, Universal Design &amp; Geriatric Ergonomics, Adaptive Envelope Repurposing.<br>
+                • <strong>Foundational &amp; Digital Media:</strong> 3D Space Planning Studies, Computational Pattern Formations, Geometric Fabrication Workflows.<br>
+                • <strong>Theory &amp; Research Seminars:</strong> Research Through Design Methodologies, Vernacular Architecture Analysis, Sustainable Building Science Audits.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
