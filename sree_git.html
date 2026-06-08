@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sreeprada Goguapati | Researcher • Designer • Educator</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#f8f5ef;
+    --white:#ffffff;
+    --text:#111111;
+    --accent:#7b5e3b;
+    --light:#ebe4d8;
+
+    --font-heading:'Cormorant Garamond',serif;
+    --font-body:'Inter',sans-serif;
+    --font-label:'Space Grotesk',sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    line-height:1.7;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:24px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(12px);
+    background:rgba(248,245,239,.88);
+    z-index:1000;
+}
+
+.logo{
+    font-family:var(--font-label);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    text-decoration:none;
+    color:var(--text);
+    font-size:13px;
+}
+
+nav ul{
+    display:flex;
+    gap:32px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+section{
+    padding:120px 6%;
+}
+
+.label{
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--accent);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:url("assets/images/flower-of-life.png");
+    background-repeat:repeat;
+    background-size:320px;
+
+    opacity:.07;
+}
+
+.hero-content{
+    position:relative;
+    z-index:10;
+    max-width:1000px;
+}
+
+.hero h1{
+    font-family:var(--font-heading);
+    font-size:clamp(4rem,8vw,8rem);
+    line-height:.9;
+    margin:20px 0 30px;
+}
+
+.hero p{
+    max-width:780px;
+    font-size:1.2rem;
+    font-weight:300;
+}
+
+.statement{
+    background:white;
+}
+
+.statement-text{
+    max-width:1000px;
+    font-family:var(--font-heading);
+    font-size:clamp(1.7rem,3vw,3rem);
+    line-height:1.3;
+    border-left:2px solid var(--accent);
+    padding-left:40px;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:60px;
+    border-bottom:1px solid rgba(0,0,0,.08);
+    padding-bottom:20px;
+}
+
+.section-header h2{
+    font-family:var(--font-heading);
+    font-size:3rem;
+}
+
+.project{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    margin-bottom:100px;
+    align-items:center;
+}
+
+.project img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+}
+
+.project h3{
+    font-family:var(--font-heading);
+    font-size:2.5rem;
+    margin:15px 0;
+}
+
+.project p{
+    color:#555;
+}
+
+.timeline{
+    background:white;
+}
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:150px 220px 1fr;
+    padding:35px 0;
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.year{
+    font-family:var(--font-heading);
+    font-size:2rem;
+    color:var(--accent);
+}
+
+.meta{
+    font-family:var(--font-label);
+    text-transform:uppercase;
+    font-size:12px;
+}
+
+.timeline-item h4{
+    font-family:var(--font-heading);
+    font-size:1.8rem;
+}
+
+.teaching-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border:1px solid rgba(0,0,0,.06);
+}
+
+.card h3{
+    font-family:var(--font-heading);
+    margin-bottom:15px;
+}
+
+footer{
+    padding:80px 6%;
+    text-align:center;
+    border-top:1px solid rgba(0,0,0,.08);
+}
+
+@media(max-width:900px){
+
+    nav ul{
+        display:none;
+    }
+
+    .project{
+        grid-template-columns:1fr;
+    }
+
+    .timeline-item{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .teaching-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a class="logo" href="#">Sreeprada Goguapati</a>
+
+    <ul>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Teaching</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Publications</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="label">
+            Interior Designer • Researcher • Educator
+        </div>
+
+        <h1>
+            Designing<br>
+            Dignity,<br>
+            Climate & Craft
+        </h1>
+
+        <p>
+            My work explores ageing, environmental performance,
+            vernacular intelligence, computational design and
+            material culture through research, teaching and
+            design practice.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="statement">
+
+    <div class="statement-text">
+
+        “From age-friendly environments to high-performance
+        jaali systems, my work investigates how traditional
+        knowledge, environmental intelligence and human-centred
+        design can inform contemporary architecture and interiors.”
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="section-header">
+        <h2>Featured Research & Design Work</h2>
+        <div class="label">Selected Projects</div>
+    </div>
+
+    <div class="project">
+
+        <img src="assets/images/jaali.jpg">
+
+        <div>
+            <div class="label">Doctoral Research</div>
+
+            <h3>
+                Reimagining the Jaali
+            </h3>
+
+            <p>
+                Investigating vernacular perforated screens through
+                environmental simulation, daylight analysis,
+                material experimentation and digital fabrication.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="project">
+
+        <img src="assets/images/oldagehome.jpg">
+
+        <div>
+
+            <div class="label">
+                Design for Ageing
+            </div>
+
+            <h3>
+                Designing for Dignity
+            </h3>
+
+            <p>
+                Evidence-based interior design informed by
+                8 case studies, 158 surveys, behavioural
+                observation and universal design principles.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="project">
+
+        <img src="assets/images/kondapalli.jpg">
+
+        <div>
+
+            <div class="label">
+                Craft Revitalisation
+            </div>
+
+            <h3>
+                Kondapalli Innovation Project
+            </h3>
+
+            <p>
+                Translating traditional craft knowledge into
+                contemporary product systems through design
+                thinking and participatory research.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="timeline">
+
+    <div class="section-header">
+        <h2>Academic Journey</h2>
+        <div class="label">Timeline</div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">2026</div>
+        <div class="meta">PhD Research</div>
+        <div>
+            <h4>IIT Hyderabad</h4>
+            <p>Adaptive Jaali Systems and Environmental Performance.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">2024</div>
+        <div class="meta">Patent</div>
+        <div>
+            <h4>Modular Interlocking Jaali System</h4>
+            <p>Patent development and prototype fabrication.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">2018</div>
+        <div class="meta">Master's Degree</div>
+        <div>
+            <h4>Interior Architecture & Design</h4>
+            <p>Environmental Design and Building Performance.</p>
+        </div>
+    </div>
+
+</section>
+
+<section>
+
+    <div class="section-header">
+        <h2>Teaching & Scholarship</h2>
+        <div class="label">Faculty Portfolio</div>
+    </div>
+
+    <div class="teaching-grid">
+
+        <div class="card">
+            <h3>Teaching</h3>
+            <p>Interior Design, Environmental Design, Furniture Design and Design Research.</p>
+        </div>
+
+        <div class="card">
+            <h3>Research</h3>
+            <p>Vernacular Architecture, Daylighting, Sustainable Envelopes and Design for Wellbeing.</p>
+        </div>
+
+        <div class="card">
+            <h3>Publications</h3>
+            <p>Conference papers, journal articles, patent work and exhibitions.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3 style="font-family:var(--font-heading);font-size:2rem;">
+        Sreeprada Goguapati
+    </h3>
+
+    <p>
+        Researcher • Designer • Educator
+    </p>
+
+</footer>
+
+</body>
+</html>
