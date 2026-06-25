@@ -3,57 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archive & CV — Sreeprada Gogulapati</title>
+    <title>Archive & Academic Profile — Sreeprada Gogulapati</title>
     <style>
+        :root {
+            --color-paper: #f7f4ee;
+            --color-ink: #1f1f1f;
+            --color-clay: #a56b42;
+            --color-sage: #69735c;
+        }
         body {
-            background-color: #f7f4ee;
-            color: #1f1f1f;
+            background-color: var(--color-paper);
+            color: var(--color-ink);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             padding: 4rem 2rem;
             max-width: 800px;
             margin: 0 auto;
         }
-        header a { text-decoration: none; color: #a56b42; font-size: 0.85rem; text-transform: uppercase;}
-        h1 { font-family: 'Playfair Display', serif; font-weight: 400; margin-top: 0.5rem; }
-        h2 { font-family: 'Playfair Display', serif; font-weight: 400; margin-top: 3rem; border-bottom: 1px solid #1f1f1f; padding-bottom: 0.5rem; }
-        .entry { margin-bottom: 1.5rem; display: flex; justify-content: space-between; }
-        .role { font-weight: 500; }
-        .institution { color: #69735c; }
+        header a { 
+            text-decoration: none; 
+            color: var(--color-clay); 
+            font-size: 0.85rem; 
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 400; 
+            margin-top: 0.5rem; 
+            font-size: 2.5rem;
+        }
+        h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 400; 
+            margin-top: 3.5rem; 
+            border-bottom: 1px solid var(--color-ink); 
+            padding-bottom: 0.5rem; 
+            font-size: 1.5rem;
+        }
+        .entry { 
+            margin-top: 1.5rem;
+            margin-bottom: 2rem; 
+        }
+        .entry-header {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: baseline;
+            font-weight: 500;
+        }
+        .role { 
+            font-size: 1.1rem;
+        }
+        .timeline-date { 
+            font-size: 0.85rem; 
+            color: var(--color-sage); 
+            font-weight: 500;
+        }
+        .institution { 
+            color: var(--color-clay); 
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .description {
+            font-size: 0.95rem;
+            color: #444;
+            margin-top: 0.25rem;
+        }
+        ul.details-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        ul.details-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        ul.details-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--color-sage);
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <a href="index.html">← Index</a>
+        <a href="index.html">← Return to Main Notebook</a>
         <h1>Academic & Curatorial Profile</h1>
     </header>
     
-    <h2>Research Tracks</h2>
+    <!-- APPOINTMENTS & TEACHING TRACK -->
+    <h2>Teaching & Practice-Based Appointments</h2>
+
     <div class="entry">
-        <div>
-            <span class="role">Doctorated Researcher in Sustainable Design</span><br>
-            <span class="institution">Indian Institute of Technology, Hyderabad</span>
+        <div class="entry-header">
+            <span class="role">PhD Scholar & Prime Minister's Research Fellow (PMRF)</span>
+            <span class="timeline-date">2020 — Present</span>
         </div>
+        <div class="institution">Greenko School of Sustainability, IIT Hyderabad</div>
+        <div class="description">Conducting doctoral research exploring the sculptural properties, performance dynamics, and adaptive futures of vernacular perforated screens (Jaalis). Maintain a 9.75 CGPA in PhD coursework. Selected for advanced doctoral specialization by the Technical University of Munich.</div>
     </div>
 
-    <h2>Credentials & Chronology</h2>
     <div class="entry">
-        <div>
-            <span class="role">Executive Certificate in Construction Management</span><br>
-            <span class="institution">IIT Madras</span>
+        <div class="entry-header">
+            <span class="role">Guest Professor — Interior Architecture Graduate Track</span>
+            <span class="timeline-date">2019 — 2020</span>
         </div>
+        <div class="institution">Maharani Cluster University, Government of Karnataka</div>
+        <div class="description">Instructed M.Sc. cohorts in Advanced Building Materials, Retail Space Design, and Restoration methods. Formulated syllabus specifications for the Board of Studies (BOS). Led applied computational design studios (3Ds Max, SketchUp, Photoshop).</div>
     </div>
+
     <div class="entry">
-        <div>
-            <span class="role">Interior Architecture & Space Styling Specializations</span><br>
-            <span class="institution">Oxford Home Study Centre Portfolio</span>
+        <div class="entry-header">
+            <span class="role">Guest Professor — Interior Design Undergraduate Faculty</span>
+            <span class="timeline-date">2019 — 2020</span>
         </div>
+        <div class="institution">Smt. VHD Central Institute of Home Science, Government of Karnataka</div>
+        <div class="description">Taught furniture design pedagogy, architectural drafting, project estimation, and project management. Directed intensive design studio sessions.</div>
     </div>
+
     <div class="entry">
-        <div>
-            <span class="role">Bachelor of Design (B.Des)</span><br>
-            <span class="institution">JNAFAU School of Planning and Architecture</span>
+        <div class="entry-header">
+            <span class="role">Assistant Professor — Design & Architecture Faculty</span>
+            <span class="timeline-date">2018 — 2019</span>
         </div>
+        <div class="institution">Amity University Gwalior</div>
+        <div class="description">Delivered comprehensive B.Design curriculum spanning Sustainable Interiors, Project Management, and Working Drawings. Managed academic mentoring for incoming designer cohorts. Served as visiting faculty to the B.Arch department for core interior specializations.</div>
     </div>
+
+
+    <!-- FIELD INQUIRIES & FELLOWSHIPS -->
+    <h2>Institutional Inquiries & Internships</h2>
+
+    <div class="entry">
+        <div class="entry-header">
+            <span class="role">Institutional Fellow & Pop-Up Studio Coordinator</span>
+            <span class="timeline-date">2017</span>
+        </div>
+        <div class="institution">CEPT University, Ahmedabad</div>
+        <div class="description">Developed pop-up architectural models, installations, and structural reports surveying historic structural adaptations. survey methodologies integrated via specialized spatial tools (QGIS).</div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-header">
+            <span class="role">Design Associate</span>
+            <span class="timeline-date">2016</span>
+        </div>
+        <div class="institution">New Designer Web Pvt. Ltd., Hyderabad</div>
+        <div class="description">Completed practical tracks spanning structural working drawings, bill of quantities (BOQ) formulations, and project management execution.</div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-header">
+            <span class="role">Summer Research Intern — Ergonomics Laboratory</span>
+            <span class="timeline-date">2015</span>
+        </div>
+        <div class="institution">Indian Institute of Technology, Guwahati</div>
+        <div class="description">Conducted analytical field studies on user-centric micro-environments. Handled structural evaluation methodologies (RULA/REBA analysis) mapped to assistive product prototypes for aging demographics. Designed interactive signage and public space frameworks.</div>
+    </div>
+
+
+    <!-- EDUCATION MATRIX -->
+    <h2>Educational Credentials</h2>
+
+    <div class="entry">
+        <div class="entry-header">
+            <span class="role">Doctor of Philosophy (Ph.D.) — Environmental Design & Architecture</span>
+            <span class="timeline-date">Completed Coursework Track</span>
+        </div>
+        <div class="institution">IIT Hyderabad</div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-header">
+            <span class="role">Master of Interior Architecture & Design</span>
+            <span class="timeline-date">2016 — 2018</span>
+        </div>
+        <div class="institution">CEPT University, Ahmedabad</div>
+        <ul class="details-list">
+            <li>Core Specializations: Building Energy Efficiency, Craft Studies, Architecture History, and Generative Design Systems.</li>
+        </ul>
+    </div>
+
+    <div class="entry">
+        <div class="entry-header">
+            <span class="role">Bachelor of Design (B.Des) — Interior Design</span>
+            <span class="timeline-date">2012 — 2016</span>
+        </div>
+        <div class="institution">Jawaharlal Nehru Architecture and Fine Arts University (JNAFAU), Hyderabad</div>
+    </div>
+
 </body>
 </html>
