@@ -39,20 +39,20 @@
         .hero h1 { font-size: clamp(3.5rem, 8vw, 7.5rem); line-height: 0.9; margin-bottom: 30px; letter-spacing: -2px; }
         .hero p { max-width: 750px; font-size: 1.25rem; font-weight: 300; color: #222; line-height: 1.7; }
 
-        /* Pure CSS Image Tiling Grid - Completely eliminates SVG rendering issues */
+        /* Pure CSS Image Tiling Grid using flower of life.png */
         .blueprint-canvas-wrapper {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 150%; /* Accounts for down-scroll parallax offset headroom */
+            height: 150%; 
             z-index: 1;
-            opacity: 0.15; /* Transparent rendering layer */
+            opacity: 0.15; 
             pointer-events: none;
             overflow: hidden;
             background-image: url('assets/images/flower of life.png');
             background-repeat: repeat;
-            background-size: 320px auto; /* Scaled down for subtle geometric background texture */
+            background-size: 320px auto; 
             background-position: center top;
             will-change: transform;
         }
@@ -70,4 +70,40 @@
         .editorial-text-pane h3 { font-size: 2.5rem; margin: 15px 0; line-height: 1.15; }
         .editorial-text-pane p { color: #444; margin-bottom: 30px; font-size: 1.05rem; }
         
-        .text-link { font-family: var(--font-label); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color:
+        .text-link { font-family: var(--font-label); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: 500; transition: color 0.3s; }
+        .text-link:hover { color: var(--accent); }
+        .text-link::after { content: " →"; }
+
+        .timeline-container { margin-top: 40px; position: relative; z-index: 5; }
+        .timeline-row { display: grid; grid-template-columns: 150px 1fr 2fr; padding: 35px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .timeline-year { font-size: 2rem; font-family: var(--font-heading); color: var(--accent); line-height: 1; }
+        .timeline-meta { font-family: var(--font-label); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; padding-top: 8px; }
+        .timeline-detail h4 { font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 5px; font-weight: 500; }
+        .timeline-detail p { color: #555; font-size: 0.95rem; }
+
+        footer { padding: 60px 6%; border-top: 1px solid rgba(0,0,0,0.05); text-align: center; font-family: var(--font-label); font-size: 12px; letter-spacing: 1px; color: #666; position: relative; z-index: 5; }
+
+        @media(max-width: 960px) {
+            nav { padding: 20px 4%; }
+            nav ul { display: none; }
+            section { padding: 100px 4% 60px 4%; }
+            .featured-editorial-grid { grid-template-columns: 1fr; gap: 30px; }
+            .editorial-image-pane { min-height: 350px; }
+            .timeline-row { grid-template-columns: 1fr; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Sreeprada Goguapati</a>
+        <ul>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="contact.html">CV / Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class
