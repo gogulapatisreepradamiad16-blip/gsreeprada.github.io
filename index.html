@@ -1,79 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sreeprada Gogulapati | Research • Innovation • Design</title>
-<style>
-body{font-family:Arial,sans-serif;max-width:1200px;margin:auto;padding:0;background:#f8f5ef;color:#111;line-height:1.6}
-nav{position:sticky;top:0;background:#f8f5ef;padding:20px;border-bottom:1px solid #ddd}
-nav a{margin-right:20px;text-decoration:none;color:#333}
-.hero{padding:100px 20px}
-h1{font-size:4rem;margin:0}
-section{padding:60px 20px}
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card{background:white;padding:20px;border:1px solid #ddd}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreeprada Gogulapati — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-paper: #f7f4ee;
+            --color-ink: #1f1f1f;
+            --color-clay: #a56b42;
+            --color-sage: #69735c;
+        }
+        body {
+            background-color: var(--color-paper);
+            color: var(--color-ink);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header {
+            margin-bottom: 5rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            margin: 0 0 0.5rem 0;
+        }
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: var(--color-clay);
+            margin-bottom: 2rem;
+        }
+        .statement {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            max-width: 800px;
+            line-height: 1.4;
+        }
+        
+        /* The Unifying Killer Feature: Visual Timeline */
+        .killer-timeline {
+            margin: 4rem 0;
+            padding: 1.5rem;
+            border-top: 1px solid var(--color-ink);
+            border-bottom: 1px solid var(--color-ink);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .timeline-step { color: var(--color-sage); font-weight: 500; }
+        .timeline-arrow { color: var(--color-clay); }
+
+        /* Giant Four Blocks Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+        .block {
+            background: #fff;
+            border: 1px solid rgba(31,31,31,0.1);
+            padding: 2.5rem;
+            text-decoration: none;
+            color: var(--color-ink);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 350px;
+        }
+        .block:hover {
+            border-color: var(--color-clay);
+        }
+        .question {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            margin: 0 0 2rem 0;
+            line-height: 1.3;
+        }
+        .title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .thumbnail-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: var(--color-paper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-sage);
+            font-size: 0.9rem;
+        }
+        nav.footer-nav {
+            margin-top: 5rem;
+            display: flex;
+            gap: 2rem;
+            border-top: 1px solid rgba(31,31,31,0.1);
+            padding-top: 2rem;
+        }
+        nav.footer-nav a {
+            color: var(--color-ink);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        nav.footer-nav a:hover { color: var(--color-clay); }
+    </style>
 </head>
 <body>
 
-<nav>
-<a href="index.html"><strong>Home</strong></a>
-<a href="research.html">Research</a>
-<a href="inventions.html">Inventions</a>
-<a href="publications.html">Publications</a>
-<a href="artistic-research.html">Artistic Research</a>
-<a href="practice.html">Practice</a>
-<a href="creative-works.html">Creative Works</a>
-<a href="teaching.html">Teaching</a>
-<a href="cv.html">CV</a>
-</nav>
+    <header>
+        <h1>Sreeprada Gogulapati</h1>
+        <div class="subtitle">Designer, Researcher, Inventor, Educator</div>
+        <div class="statement">
+            I investigate how knowledge adapts, survives, and takes form through craft, space, technology, and storytelling.
+        </div>
+    </header>
 
-<div class="hero">
-<p>DESIGNER • RESEARCHER • INVENTOR • EDUCATOR</p>
-<h1>Elastic<br>Vernaculars.</h1>
-<p>Exploring craft, psychology, computation, digital fabrication, artistic research, and spatial design.</p>
-</div>
+    <!-- The Killer Feature Timeline -->
+    <div class="killer-timeline">
+        <span class="timeline-step">Interior Design</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Ageing</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Craft Futures</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Psychology</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Digital Fabrication</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Elastic Vernaculars</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Patents</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Narrative Design</span>
+    </div>
 
-<section>
-<h2>Research Impact</h2>
-<div class="metrics">
-<div class="card"><h3>8</h3><p>Patent & Design Filings</p></div>
-<div class="card"><h3>2</h3><p>Book Chapters</p></div>
-<div class="card"><h3>2</h3><p>Conference Presentations</p></div>
-<div class="card"><h3>1</h3><p>International Exhibition</p></div>
-</div>
-</section>
+    <!-- The Core Portfolio Questions -->
+    <main class="grid-container">
+        <a href="work.html#ageing" class="block">
+            <p class="question">"How do people age with dignity?"</p>
+            <div>
+                <div class="title">Design for Ageing</div>
+                <div class="thumbnail-placeholder"><img src="pic01.jpg" alt="Design for Ageing Preview" style="width:100%; height:100%; object-fit:cover;"></div>
+            </div>
+        </a>
 
-<section>
-<h2>Major Research Contributions</h2>
-<div class="grid">
-<div class="card"><h3>Elastic Vernaculars</h3></div>
-<div class="card"><h3>Fabricational Third Space</h3></div>
-<div class="card"><h3>IMMA-DBR</h3></div>
-</div>
-</section>
+        <a href="work.html#craft" class="block">
+            <p class="question">"How do traditions adapt?"</p>
+            <div>
+                <div class="title">Craft Futures</div>
+                <div class="thumbnail-placeholder"><img src="pic02.jpg" alt="Craft Futures Preview" style="width:100%; height:100%; object-fit:cover;"></div>
+            </div>
+        </a>
 
-<section>
-<h2>Featured Outputs</h2>
-<div class="grid">
-<div class="card"><h3>Modular Architectural Screen System</h3><p>Patent Application</p></div>
-<div class="card"><h3>Gear Actuated Flexure Casting System</h3><p>Patent Application</p></div>
-<div class="card"><h3>Developing Spatial Patterned Products for Buildings</h3><p>Book Chapter</p></div>
-<div class="card"><h3>Perceptual Differentiation</h3><p>Book Chapter</p></div>
-</div>
-</section>
+        <a href="work.html#fabrication" class="block">
+            <p class="question">"How does knowledge become matter?"</p>
+            <div>
+                <div class="title">Fabrication & Innovation</div>
+                <div class="thumbnail-placeholder"><img src="pic03.jpg" alt="Fabrication Preview" style="width:100%; height:100%; object-fit:cover;"></div>
+            </div>
+        </a>
 
-<section>
-<h2>Education</h2>
-<ul>
-<li>PhD in Design, IIT Hyderabad</li>
-<li>M.Sc. Psychology</li>
-<li>Master of Interior Architecture & Design</li>
-<li>Bachelor of Interior Design</li>
-</ul>
-</section>
+        <a href="work.html#narrative" class="block">
+            <p class="question">"How do stories shape behaviour?"</p>
+            <div>
+                <div class="title">Narrative Design</div>
+                <div class="thumbnail-placeholder" style="background:#e9e5dc; font-style:italic;">Visual Inquiry & Storyboards</div>
+            </div>
+        </a>
+    </main>
+
+    <nav class="footer-nav">
+        <a href="work.html">Inquiries</a>
+        <a href="research.html">Publications</a>
+        <a href="teaching.html">CV / Archive</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
 </body>
 </html>
