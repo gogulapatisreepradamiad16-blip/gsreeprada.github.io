@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreeprada Gogulapati — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-paper: #f7f4ee;
+            --color-ink: #1f1f1f;
+            --color-clay: #a56b42;
+            --color-sage: #69735c;
+        }
+        body {
+            background-color: var(--color-paper);
+            color: var(--color-ink);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header {
+            margin-bottom: 5rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            margin: 0 0 0.5rem 0;
+        }
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: var(--color-clay);
+            margin-bottom: 2rem;
+        }
+        .statement {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            max-width: 800px;
+            line-height: 1.4;
+        }
+        
+        /* The Unifying Killer Feature: Visual Timeline */
+        .killer-timeline {
+            margin: 4rem 0;
+            padding: 1.5rem;
+            border-top: 1px solid var(--color-ink);
+            border-bottom: 1px solid var(--color-ink);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .timeline-step { color: var(--color-sage); font-weight: 500; }
+        .timeline-arrow { color: var(--color-clay); }
+
+        /* Giant Four Blocks Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+        .block {
+            background: #fff;
+            border: 1px solid rgba(31,31,31,0.1);
+            padding: 2.5rem;
+            text-decoration: none;
+            color: var(--color-ink);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 350px;
+        }
+        .block:hover {
+            border-color: var(--color-clay);
+        }
+        .question {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            margin: 0 0 2rem 0;
+            line-height: 1.3;
+        }
+        .title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .thumbnail-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: var(--color-paper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-sage);
+            font-size: 0.9rem;
+        }
+        nav.footer-nav {
+            margin-top: 5rem;
+            display: flex;
+            gap: 2rem;
+            border-top: 1px solid rgba(31,31,31,0.1);
+            padding-top: 2rem;
+        }
+        nav.footer-nav a {
+            color: var(--color-ink);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        nav.footer-nav a:hover { color: var(--color-clay); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sreeprada Gogulapati</h1>
+        <div class="subtitle">Designer, Researcher, Inventor, Educator</div>
+        <div class="statement">
+            I investigate how knowledge adapts, survives, and takes form through craft, space, technology, and storytelling.
+        </div>
+    </header>
+
+    <!-- The Killer Feature Timeline -->
+    <div class="killer-timeline">
+        <span class="timeline-step">Interior Design</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Ageing</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Craft Futures</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Psychology</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Digital Fabrication</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Elastic Vernaculars</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Patents</span> <span class="timeline-arrow">↓</span>
+        <span class="timeline-step">Narrative Design</span>
+    </div>
+
+    <!-- The Core Portfolio Questions -->
+    <main class="grid-container">
+        <a href="work.html#ageing" class="block">
+            <p class="question">"How do people age with dignity?"</p>
+            <div>
+                <div class="title">Design for Ageing</div>
+                <div class="thumbnail-placeholder"><img src="pic01.jpg" alt="Design for Ageing Preview" style="width:100%; height:100%; object-fit:cover;"></div>
+            </div>
+        </a>
+
+        <a href="work.html#craft" class="block">
+            <p class="question">"How do traditions adapt?"</p>
+            <div>
+                <div class="title">Craft Futures</div>
+                <div class="thumbnail-placeholder"><img src="pic02.jpg" alt="Craft Futures Preview" style="width:100%; height:100%; object-fit:cover;"></div>
+            </div>
+        </a>
+
+        <a href="work.html#fabrication" class="block">
+            <p class="question">"How does knowledge become matter?"</p>
+            <div>
+                <div class="title">Fabrication & Innovation</div>
+                <div class="thumbnail-placeholder"><img src="pic03.jpg" alt="Fabrication Preview" style="width:100%; height:100%; object-fit:cover;"></div>
+            </div>
+        </a>
+
+        <a href="work.html#narrative" class="block">
+            <p class="question">"How do stories shape behaviour?"</p>
+            <div>
+                <div class="title">Narrative Design</div>
+                <div class="thumbnail-placeholder" style="background:#e9e5dc; font-style:italic;">Visual Inquiry & Storyboards</div>
+            </div>
+        </a>
+    </main>
+
+    <nav class="footer-nav">
+        <a href="work.html">Inquiries</a>
+        <a href="research.html">Publications</a>
+        <a href="teaching.html">CV / Archive</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</body>
+</html>
