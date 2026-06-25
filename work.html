@@ -3,124 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Practice | Sreeprada Goguapati</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <title>Inquiries — Sreeprada Gogulapati</title>
     <style>
-        :root { --bg: #f8f5ef; --text: #111111; --accent: #7b5e3b; --light: #ebe4d8; --white: #ffffff; --font-heading: 'Cormorant Garamond', serif; --font-body: 'Inter', sans-serif; --font-label: 'Space Grotesk', sans-serif; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; }
-        h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; }
-        .label { font-family: var(--font-label); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
-        
-        nav { position: fixed; top: 0; width: 100%; padding: 25px 6%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; backdrop-filter: blur(12px); background: rgba(248, 245, 239, 0.85); border-bottom: 1px solid rgba(0,0,0,0.03); }
-        .logo { font-family: var(--font-label); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; color: var(--text); }
-        nav ul { display: flex; gap: 35px; list-style: none; }
-        nav a { text-decoration: none; color: var(--text); font-size: 13px; letter-spacing: 1px; font-family: var(--font-label); text-transform: uppercase; }
-        nav a.active { color: var(--accent); font-weight: 500; }
-
-        .container { max-width: 1200px; margin: 160px auto 100px auto; padding: 0 4%; }
-        .page-intro { margin-bottom: 80px; max-width: 800px; }
-        .page-intro h1 { font-size: 4rem; margin-bottom: 20px; }
-        
-        .work-showcase-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
-        .work-card { background: var(--white); padding: 50px; border: 1px solid rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between; }
-        .work-card h2 { font-size: 2.3rem; margin: 15px 0; line-height: 1.15; }
-        .work-card p { color: #444; font-size: 0.98rem; margin-bottom: 30px; text-align: justify; }
-        
-        .spec-list { list-style: none; margin: 20px 0; padding-top: 15px; border-top: 1px solid rgba(0,0,0,0.05); }
-        .spec-list li { font-size: 0.85rem; color: #444; margin-bottom: 12px; display: flex; justify-content: space-between; }
-        .spec-list li span { font-family: var(--font-label); text-transform: uppercase; font-size: 10px; color: var(--accent); }
-        
-        .asset-wrapper-sm { width: 100%; border: 1px solid rgba(0,0,0,0.05); background: var(--bg); overflow: hidden; margin-bottom: 25px; }
-        .asset-wrapper-sm img { width: 100%; height: 260px; object-fit: cover; display: block; }
-
-        @media(max-width: 850px) {
-            .work-showcase-grid { grid-template-columns: 1fr; }
+        :root {
+            --color-paper: #f7f4ee;
+            --color-ink: #1f1f1f;
+            --color-clay: #a56b42;
+            --color-sage: #69735c;
+        }
+        body {
+            background-color: var(--color-paper);
+            color: var(--color-ink);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        header a {
+            text-decoration: none;
+            color: var(--color-clay);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-top: 0.5rem;
+        }
+        section {
+            margin-top: 6rem;
+            padding-top: 4rem;
+            border-top: 1px solid rgba(31,31,31,0.15);
+        }
+        .meta-question {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.8rem;
+            color: var(--color-clay);
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-sage);
+            margin-top: 2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+        li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--color-sage);
+        }
+        blockquote.reflection {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin: 3rem 0 0 0;
+            padding: 0 0 0 2rem;
+            border-left: 2px solid var(--color-clay);
+            color: #444;
+        }
+        .file-link {
+            font-size: 0.85rem;
+            color: var(--color-ink);
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="index.html" class="logo">Sreeprada Goguapati</a>
+    <header>
+        <a href="index.html">← Return to Main Notebook</a>
+        <h1>Inquiries & Evidence</h1>
+    </header>
+
+    <!-- SECTION 1 -->
+    <section id="ageing">
+        <div class="meta-question">How do people age with dignity?</div>
+        <h2>Section 1: Design for Ageing</h2>
+        <p>This is where my architectural track and design career starts. Not because it represents old systems, but because it provides the cognitive, architectural, and ergonomic foundation for all spatial realities.</p>
+        
+        <h3>Core Explored Themes</h3>
         <ul>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="work.html" class="active">Work</a></li>
-            <li><a href="teaching.html">Teaching</a></li>
-            <li><a href="writing.html">Writing</a></li>
-            <li><a href="contact.html">CV / Contact</a></li>
+            <li>Accessibility & spatial navigation</li>
+            <li>Cognition and dementia support structures</li>
+            <li>Ergonomics & physical human factors</li>
+            <li>Emotional well-being & transitional safety</li>
+            <li>Adaptive micro-environments</li>
         </ul>
-    </nav>
 
-    <div class="container">
-        <div class="page-intro">
-            <span class="label">Spatial Demonstrations</span>
-            <h1>Spatial Design &amp; Architectural Practice</h1>
-            <p>Translating theoretical principles into functional built systems. Projects span human-centric geriatric layouts, detailed furniture joinery blueprints, and strategic commercial volume configurations.</p>
-        </div>
+        <h3>Evidence Artifacts</h3>
+        <p>Old Age Home Thesis Portfolio, HWWE Ergonomics Framework, and the Adaptive Bed Design Space. Further iterations and metrics can be found referenced directly in the documentation within <code>done_portfolio.pdf</code> and <code>portfolio_oldagehome.pptx</code>.</p>
 
-        <div class="work-showcase-grid">
-            
-            <div class="work-card">
-                <div>
-                    <span class="label">B.Des Thesis Track // SPA Hyderabad</span>
-                    <h2>Geriatric Spatial Architecture (Old Age Home Studio)</h2>
-                    <p>An anthropometric exploration modeling specialized interior configurations for aging populations. This project features layout modifications for custom kitchen reach parameters, specific wheelchair turn clearances, logical electrical accessibility maps, and clear wayfinding cues to reduce cognitive stress.</p>
-                    <div class="asset-wrapper-sm">
-                        <img src="assets/images/Screenshot 2025-04-03 023453.jpg" alt="Geriatric Spatial Architecture Layout Matrix">
-                    </div>
-                </div>
-                <ul class="spec-list">
-                    <li><span>Core Vector</span> Ergonomic Clearance Mapping • Cognitive Cues • Universal Design</li>
-                </ul>
-            </div>
+        <blockquote class="reflection">
+            <strong>What stayed with me:</strong><br>
+            Designing spaces for physical vulnerability completely eliminates room for aesthetic indulgence. When tracking light requirements or modifying handrails for cognitive reassurance, the architecture stops acting as a container and begins acting directly as care.
+        </blockquote>
+    </section>
 
-            <div class="work-card">
-                <div>
-                    <span class="label">Industrial Case Study Portfolio</span>
-                    <h2>Automobile Showroom Brand Architecture</h2>
-                    <p>Moving past standard showroom aesthetics to focus entirely on volumetric planning, complex circulation flow tracking, clear site safety access, and the integration of distinctive commercial brand display areas.</p>
-                    <div class="asset-wrapper-sm">
-                        <img src="assets/images/pic02.jpg" alt="Showroom Volumetric Spatial Configuration Blueprint">
-                    </div>
-                </div>
-                <ul class="spec-list">
-                    <li><span>Core Vector</span> Circulation Analysis • Effective Selling Matrices • Volume Planning</li>
-                </ul>
-            </div>
+    <!-- SECTION 2 -->
+    <section id="craft">
+        <div class="meta-question">How do traditions adapt?</div>
+        <h2>Section 2: Craft Futures (2015 → Present)</h2>
+        <p>This section outlines a decade of system-level observations of craft survival rather than finite design outputs.</p>
+        
+        <h3>Systemic Inquiries</h3>
+        <ul>
+            <li><strong>Kondapalli:</strong> How does a traditional craft dynamically respond to material scarcity? (Refer to <code>portfolio_kondapalli.pptx</code>)</li>
+            <li><strong>Nakashi:</strong> How does local craft negotiate modern technological shifts and tools?</li>
+            <li><strong>Kalamkari:</strong> How does a folk art evolve through shifting global markets and visual token exchange?</li>
+        </ul>
 
-            <div class="work-card">
-                <div>
-                    <span class="label">Technical Production Specification</span>
-                    <h2>Furniture Design &amp; Precision Joinery</h2>
-                    <p>Detailed joinery sheets, precise physical material load calculations, and technical drafting documentation designed to bridge the gap between digital parametric models and traditional fabrication workshops.</p>
-                    <div class="asset-wrapper-sm">
-                        <img src="assets/images/pic03.jpg" alt="Technical Joinery Detailing Pass Blueprint">
-                    </div>
-                </div>
-                <ul class="spec-list">
-                    <li><span>Core Vector</span> Joint Stresses • Sheet Detailing Layouts • Material Tectonics</li>
-                </ul>
-            </div>
+        <h3>Continuing Questions</h3>
+        <p>This long-term work remains unfinished. The challenge isn't saving a style, it is keeping a vernacular framework functional in a globalized logistics landscape.</p>
+    </section>
 
-            <div class="work-card">
-                <div>
-                    <span class="label">Corporate Spatial Commissions</span>
-                    <h2>Commercial Ecosystems (SRM Cafeteria &amp; Offices)</h2>
-                    <p>Realized corporate design schemes testing precise chroma-achromatic color values (tan, black, white, and lime-green pop metrics) across functional, multi-outlet dining zones and office layouts.</p>
-                    <div class="asset-wrapper-sm">
-                        <img src="assets/images/ek4l34v6n85o1wd9xnib (1) (1).jpg" alt="SRM Corporate Cafeteria Spatial Execution">
-                    </div>
-                </div>
-                <ul class="spec-list">
-                    <li><span>Core Vector</span> Multi-Outlet Seating Layouts • Commercial Space Planning</li>
-                </ul>
-            </div>
+    <!-- SECTION 3 -->
+    <section id="fabrication">
+        <div class="meta-question">How can vernacular knowledge remain adaptable through fabrication?</div>
+        <h2>Section 3: Fabrication & Innovation</h2>
+        <p>This contains my active PhD Research universe. Here, spatial engineering translates computational design patterns into tangible physical materials.</p>
+        
+        <h3>Investigations</h3>
+        <ul>
+            <li><strong>Elastic Vernaculars:</strong> Reshaping structural vernacular systems through complex geometric optimization.</li>
+            <li><strong>Fabricational Third Space:</strong> The crossover layer where digital prototyping and traditional building methods overlap.</li>
+            <li><strong>IMMA-DBR:</strong> Multi-material architectural components configured for programmatic performance.</li>
+            <li><strong>Prototypes & Patents:</strong> Hardware models and industrial designs configured as system evidence. (Full specification documents available inside <code>portfolio singlesheets.pptx</code>).</li>
+        </ul>
+    </section>
 
-        </div>
-    </div>
+    <!-- SECTION 4 -->
+    <section id="narrative">
+        <div class="meta-question">How do stories shape behaviour?</div>
+        <h2>Section 4: Narrative Design</h2>
+        <p>A deeper examination of my illustrations, vector files, and publications. I look at books not as standalone objects, but as deliberate structures for human learning and behavioral psychology.</p>
+        
+        <h3>Active Case Files</h3>
+        <ul>
+            <li><em>Pippa</em> — Structural layout and behavioral storytelling.</li>
+            <li><em>Anagha</em> — Visual language patterns for children.</li>
+            <li>Vector Layouts & Print-Matter Blueprints.</li>
+        </ul>
+    </section>
 
 </body>
 </html>
