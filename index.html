@@ -33,24 +33,34 @@
         nav a:hover, nav a.active { color: var(--accent); }
 
         section { padding: 120px 6% 80px 6%; position: relative; }
-        .hero { height: 100vh; display: flex; align-items: center; padding-top: 80px; position: relative; overflow: hidden; background: transparent; }
+        
+        .hero { 
+            height: 100vh; 
+            min-height: 600px;
+            display: flex; 
+            align-items: center; 
+            padding-top: 80px; 
+            position: relative; 
+            overflow: hidden; 
+            background: transparent; 
+        }
         
         .hero-content { position: relative; z-index: 10; max-width: 1000px; }
         .hero h1 { font-size: clamp(3.5rem, 8vw, 7.5rem); line-height: 0.9; margin-bottom: 30px; letter-spacing: -2px; }
         .hero p { max-width: 750px; font-size: 1.25rem; font-weight: 300; color: #222; line-height: 1.7; }
 
-        /* Pure CSS Image Tiling Grid using flower of life.png */
+        /* Looking for 'flower of life.png' in the exact same folder as this HTML file */
         .blueprint-canvas-wrapper {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 150%; 
+            height: 140%; 
             z-index: 1;
-            opacity: 0.15; 
+            opacity: 0.12; 
             pointer-events: none;
             overflow: hidden;
-            background-image: url('assets/images/flower of life.png');
+            background-image: url('flower of life.png');
             background-repeat: repeat;
             background-size: 320px auto; 
             background-position: center top;
@@ -106,4 +116,100 @@
         </ul>
     </nav>
 
-    <section class
+    <section class="hero">
+        <div class="blueprint-canvas-wrapper" id="heroPattern"></div>
+        
+        <div class="hero-content">
+            <div class="label" style="margin-bottom: 20px;">Interior Designer + Environmental Design Researcher + Educator</div>
+            <h1>Pattern.<br>Perception.<br>Possibility.</h1>
+            <p>Investigating how vernacular intelligence, environmental performance, and material craft systems inform contemporary architectural envelopes through data-driven computation, hands-on fabrication, and academic teaching.</p>
+        </div>
+    </section>
+
+    <section style="background: var(--white); border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="manifesto-block">
+            <div class="manifesto-text">
+                "Investigating how vernacular intelligence, environmental performance, and craft knowledge can inform contemporary design through research, making, and teaching."
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-research">
+        <div class="section-header">
+            <h2>Primary Research Thrusts</h2>
+            <div class="label">IP &amp; Empirical Portfolios</div>
+        </div>
+
+        <div class="featured-editorial-grid">
+            <div class="editorial-image-pane">
+                <img src="assets/images/Sreeprada_Window (01).jpg" alt="Modular Architectural Interlocking Lattice Structural Mockup">
+            </div>
+            <div class="editorial-text-pane">
+                <div class="label">Flagship Project 01 // Patent Ref: IIT Hyderabad</div>
+                <h3>The Modular Interlocking Jaali System</h3>
+                <p>Framing a tool-free, self-supporting architectural lattice utilizing mathematically defined triangular modules. Re-engineering vernacular screens into high-performance, contemporary parametric assemblies.</p>
+                <a href="research.html#jaali" class="text-link">Explore Patent Architecture</a>
+            </div>
+        </div>
+
+        <div class="featured-editorial-grid" style="direction: rtl;">
+            <div class="editorial-image-pane">
+                <img src="assets/images/reeprada_Window(02).jpg" alt="Daylight Factor Model Simulation Calibration Map">
+            </div>
+            <div class="editorial-text-pane" style="direction: ltr;">
+                <div class="label">Flagship Project 02 // Empirical Model</div>
+                <h3>Quantifying Jaali Geometry vs. Daylight Factor</h3>
+                <p>Deploying formal regression mathematical formulae to calculate specific solid-to-void ratios, balancing absolute glare reduction with real-world Daylight Factors (DF).</p>
+                <a href="research.html#energy" class="text-link">Examine Empirical Data</a>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--white); border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="section-header">
+            <h2>Academic Chronology</h2>
+            <div class="label">Evolution</div>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-row">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-meta">Ph.D. Candidate</div>
+                <div class="timeline-detail">
+                    <h4>Department of Design, IIT Hyderabad</h4>
+                    <p>Advanced doctoral research specializing in Sustainable Design, craft-computation workflows, and modular building envelope systems.</p>
+                </div>
+            </div>
+            <div class="timeline-row">
+                <div class="timeline-year">2018</div>
+                <div class="timeline-meta">Master's Degree</div>
+                <div class="timeline-detail">
+                    <h4>Master of Interior Architecture &amp; Design</h4>
+                    <p>Focused on environmental performance metrics, passive solar optimization strategies, and energy auditing protocols.</p>
+                </div>
+            </div>
+            <div class="timeline-row">
+                <div class="timeline-year">2012</div>
+                <div class="timeline-meta">Foundational Degree</div>
+                <div class="timeline-detail">
+                    <h4>Bachelor of Design (B.Des), SPA Hyderabad</h4>
+                    <p>Comprehensive training in space planning, interior details, and human-centric environmental layout configurations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Sreeprada Goguapati. Constructed for Faculty Appointment Review.
+    </footer>
+
+    <script>
+        const blueprint = document.getElementById("heroPattern");
+        if (blueprint) {
+            window.addEventListener("scroll", () => {
+                let offset = window.scrollY * 0.15;
+                blueprint.style.transform = `translate3d(0, ${offset}px, 0)`;
+            }, { passive: true });
+        }
+    </script>
+</body>
+</html>
