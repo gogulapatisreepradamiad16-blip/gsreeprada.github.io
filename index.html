@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gogulapati Sreeprada — Portfolio</title>
+  <!-- Google Fonts: Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    /* --- Color Variables & Type Scales --- */
+    :root {
+      --color-bg: #f7f4ee;
+      --color-text: #1f1f1f;
+      --color-accent: #a56b42;
+      --color-secondary: #69735c;
+      --color-card-bg: rgba(255, 255, 255, 0.6);
+      --color-border: rgba(31, 31, 31, 0.12);
+      
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* --- Base Normalization --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--color-bg);
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- Common Layout Elements --- */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-divider {
+      border: 0;
+      height: 1px;
+      background-color: var(--color-accent);
+      opacity: 0.25;
+      margin: 3rem 0;
+    }
+
+    /* --- Sticky Header / Navigation --- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(247, 244, 238, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-logo {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .site-nav a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-text);
+      text-decoration: none;
+      margin-left: 1.75rem;
+      padding-bottom: 0.25rem;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a:hover {
+      color: var(--color-accent);
+    }
+
+    /* --- Section Formatting --- */
+    .portfolio-section {
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .gray-bg {
+      background-color: rgba(105, 115, 92, 0.04);
+    }
+
+    .section-heading {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subheading {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-secondary);
+      margin-bottom: 4rem;
+      font-weight: 600;
+    }
+
+    .meta-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    /* --- Hero Section --- */
+    .manifesto-section {
+      padding: 8rem 0 4rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-tagline {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--color-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .manifesto-title {
+      font-family: var(--font-heading);
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .manifesto-subtitle {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--color-text);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    
+    .manifesto-credentials {
+      font-size: 1.1rem;
+      color: var(--color-accent);
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+    }
+
+    .manifesto-body {
+      max-width: 850px;
+      font-size: 1.35rem;
+      line-height: 1.75;
+      font-family: var(--font-heading);
+      color: var(--color-text);
+    }
+
+    /* --- At a Glance Panel --- */
+    .glance-section {
+      padding: 4.5rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .glance-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    
+    .glance-card h3 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--color-accent);
+      margin-bottom: 0.25rem;
+    }
+    
+    .glance-card p {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text);
+      line-height: 1.4;
+    }
+
+    /* --- Areas of Inquiry Grid --- */
+    .inquiry-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .inquiry-card {
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      padding: 2.5rem 1.25rem;
+      text-decoration: none;
+      color: var(--color-text);
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .inquiry-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(165,107,66,0.06);
+    }
+
+    .inquiry-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .inquiry-card .card-arrow {
+      font-size: 1.25rem;
+      color: var(--color-accent);
+      text-align: right;
+      margin-top: 2rem;
+    }
+
+    /* --- What I Do Grid --- */
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    
+    .capability-item {
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      padding: 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--color-text);
+      border-left: 3px solid var(--color-secondary);
+    }
+
+    /* --- Thematic Inquiries Layout --- */
+    .pillar-block {
+      margin-bottom: 6rem;
+      scroll-margin-top: 6rem;
+    }
+
+    .pillar-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .pillar-header {
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .pillar-title {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      font-weight: 600;
+    }
+
+    .pillar-content {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 4rem;
+    }
+
+    .inquiry-box h4, .evidence-box h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-secondary);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .inquiry-box p {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--color-text);
+      border-left: 3px solid var(--color-accent);
+      padding-left: 1.25rem;
+    }
+
+    .evidence-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .evidence-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .evidence-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+    }
+
+    /* --- Research & Interests Layout --- */
+    .research-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 4rem;
+    }
+
+    .frameworks-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .research-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .interests-panel {
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      padding: 2.5rem;
+      border-radius: 4px;
+      align-self: start;
+    }
+
+    .interests-panel h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .interests-list {
+      list-style: none;
+    }
+
+    .interests-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .interests-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    /* --- Publications & Patents Layout --- */
+    .publications-wrapper {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 4rem;
+    }
+
+    .pub-category {
+      margin-bottom: 3.5rem;
+    }
+
+    .pub-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .pub-category h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      color: var(--color-secondary);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pub-list, .patent-list {
+      list-style: none;
+    }
+
+    .pub-list li, .patent-list li {
+      margin-bottom: 1.25rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--color-accent);
+    }
+    
+    .serial-no {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--color-secondary);
+      margin-top: 0.25rem;
+      font-weight: 500;
+    }
+
+    /* --- Teaching Elements Layout --- */
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    
+    .teaching-card {
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      padding: 2rem;
+      border-radius: 4px;
+    }
+    
+    .teaching-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .teaching-card h4 {
+      font-size: 0.9rem;
+      color: var(--color-accent);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    /* --- CV & Contact Layout --- */
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 4rem;
+    }
+
+    .cv-info h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--color-secondary);
+    }
+
+    .contact-links-block {
+      margin-top: 3rem;
+    }
+
+    .contact-links-block p {
+      margin-bottom: 0.5rem;
+    }
+
+    .text-link {
+      color: var(--color-accent);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .text-link:hover {
+      border-bottom-color: var(--color-accent);
+    }
+
+    .cv-highlights h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--color-secondary);
+    }
+
+    .cv-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .cv-table td {
+      padding: 0.75rem 0;
+      vertical-align: top;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .cv-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cv-table td:first-child {
+      width: 120px;
+      font-weight: 500;
+      color: var(--color-accent);
+      font-size: 0.9rem;
+    }
+
+    /* --- Footer Area --- */
+    .site-footer {
+      background-color: var(--color-text);
+      color: var(--color-bg);
+      padding: 4rem 0;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      opacity: 0.95;
+    }
+
+    /* --- Responsive Adaptations --- */
+    @media (max-width: 950px) {
+      .manifesto-title { font-size: 3.5rem; }
+      .inquiry-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .inquiry-card:nth-child(5) {
+        grid-column: span 2;
+      }
+      .glance-grid, .capabilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .pillar-content, .research-layout, .publications-wrapper, .cv-grid, .teaching-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .interests-panel {
+        align-self: stretch;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .site-nav a {
+        margin: 0 0.5rem;
+      }
+      .inquiry-grid, .glance-grid, .capabilities-grid {
+        grid-template-columns: 1fr;
+      }
+      .inquiry-card:nth-child(5) {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#home" class="site-logo">Gogulapati Sreeprada</a>
+      <nav class="site-nav">
+        <a href="#work">Selected Inquiries</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#publications">Publications &amp; Patents</a>
+        <a href="#cv-contact">CV &amp; Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- HERO PROFILE SECTION -->
+    <section id="home" class="manifesto-section">
+      <div class="container">
+        <p class="hero-tagline">Elastic Vernaculars</p>
+        <h1 class="manifesto-title">Gogulapati Sreeprada</h1>
+        <p class="manifesto-subtitle">Designer • Researcher • Inventor • Author</p>
+        <p class="manifesto-credentials">Doctoral Researcher, Design &nbsp;|&nbsp; Prime Minister's Research Fellow (PMRF)</p>
+        <hr class="section-divider">
+        <div class="manifesto-body">
+          <p>I am a designer whose work explores how people, crafts, materials, and knowledge systems adapt to change. My practice consists of parallel, interconnected inquiries into adaptation, craft futures, environmental psychology, digital fabrication, and narrative design.</p>
+        </div>
+
+        <!-- Visual Entry Points: Areas of Inquiry Cards -->
+        <div class="inquiry-grid">
+          <a href="#practice" class="inquiry-card">
+            <h3>Professional Practice</h3>
+            <div class="card-arrow">→</div>
+          </a>
+          <a href="#ageing" class="inquiry-card">
+            <h3>Design for Ageing</h3>
+            <div class="card-arrow">→</div>
+          </a>
+          <a href="#crafts" class="inquiry-card">
+            <h3>Craft Futures</h3>
+            <div class="card-arrow">→</div>
+          </a>
+          <a href="#fabrication" class="inquiry-card">
+            <h3>Fabrication &amp; Innovation</h3>
+            <div class="card-arrow">→</div>
+          </a>
+          <a href="#narrative" class="inquiry-card">
+            <h3>Narrative Design</h3>
+            <div class="card-arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDIBILITY DASHBOARD SECTION -->
+    <section class="glance-section gray-bg">
+      <div class="container">
+        <h2 class="section-heading" style="font-size: 1.75rem; margin-bottom: 1.5rem;">At a Glance</h2>
+        <div class="glance-grid">
+          <div class="glance-card">
+            <h3>15+</h3>
+            <p>Years of design exploration &amp; academic immersion</p>
+          </div>
+          <div class="glance-card">
+            <h3>3</h3>
+            <p>Degrees across Design, Architecture, and Psychology</p>
+          </div>
+          <div class="glance-card">
+            <h3>8</h3>
+            <p>Patent &amp; National Design Filings registered at IITH</p>
+          </div>
+          <div class="glance-card">
+            <h3>2</h3>
+            <p>Published Academic Book Chapters</p>
+          </div>
+          <div class="glance-card">
+            <h3>2</h3>
+            <p>Peer-Reviewed Conference Proceedings</p>
+          </div>
+          <div class="glance-card">
+            <h3>1</h3>
+            <p>International Research Exhibition</p>
+          </div>
+          <div class="glance-card">
+            <h3>4</h3>
+            <p>Children's Books authored &amp; illustrated</p>
+          </div>
+          <div class="glance-card">
+            <h3>Multiple</h3>
+            <p>Completed Interior, Furniture, and Craft Projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES DIRECTORY -->
+    <section class="glance-section">
+      <div class="container">
+        <h2 class="section-heading" style="font-size: 1.75rem; margin-bottom: 1.5rem;">What I Do</h2>
+        <div class="capabilities-grid">
+          <div class="capability-item">Design Research</div>
+          <div class="capability-item">Interior Design</div>
+          <div class="capability-item">Furniture Design</div>
+          <div class="capability-item">Craft Innovation</div>
+          <div class="capability-item">Digital Fabrication</div>
+          <div class="capability-item">Environmental Psychology</div>
+          <div class="capability-item">Design Strategy</div>
+          <div class="capability-item">Illustration &amp; Narrative Design</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK PORTFOLIO DETAILS -->
+    <section id="work" class="portfolio-section gray-bg">
+      <div class="container">
+        <h2 class="section-heading">Selected Inquiries</h2>
+        <p class="section-subheading">In-Depth Case Records &amp; Project Outlines</p>
+
+        <!-- PROFESSIONAL PRACTICE -->
+        <article id="practice" class="pillar-block">
+          <header class="pillar-header">
+            <h3 class="pillar-title">Professional Practice</h3>
+          </header>
+          <div class="pillar-content">
+            <div class="inquiry-box">
+              <h4>The Inquiry</h4>
+              <p>How can commercial design frameworks apply research-driven parameters—specifically adaptive reuse strategies, human factors, and regional material chains—to physical spaces and digital products?</p>
+            </div>
+            <div class="evidence-box">
+              <h4>Projects &amp; Selected Works</h4>
+              <p>A compilation of direct industry executions, physical architecture coordination, and spatial analysis layouts across multiple design scales:</p>
+              <ul class="evidence-list">
+                <li><strong>Interior Design &amp; Styling:</strong> Direct development and styling of customized spatial layouts, balancing human requirements with materials procurement execution paths.</li>
+                <li><strong>Adaptive Reuse Schemes:</strong> Spatial retrofitting models and renovation frameworks focused on transforming outdated structures using sustainable architecture intervention criteria.</li>
+                <li><strong>Furniture Design:</strong> Drafting and building custom interior furniture fixtures modeled specifically around user lifestyle transitions and structural assembly.</li>
+                <li><strong>Spatial Analysis:</strong> Technical field mapping and contextual planning utilizing QGIS vector tracking engines.</li>
+                <li><strong>Freelance Residential Projects:</strong> Execution of localized spatial planning blueprints, millwork details, material schedules, and production presentations.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- DESIGN FOR AGEING -->
+        <article id="ageing" class="pillar-block">
+          <header class="pillar-header">
+            <h3 class="pillar-title">Design for Ageing</h3>
+          </header>
+          <div class="pillar-content">
+            <div class="inquiry-box">
+              <h4>The Inquiry</h4>
+              <p>How can environmental psychology, ergonomic modeling, and spatial architecture protect human dignity, autonomy, and universal accessibility in living spaces built for aging populations experiencing physical transition?</p>
+            </div>
+            <div class="evidence-box">
+              <h4>Projects &amp; Selected Works</h4>
+              <p>This path forms the architectural and human-centered foundation of my design logic, bridging structural systems with qualitative health tracking to define parameters for changing lifespans.</p>
+              <ul class="evidence-list">
+                <li><strong>Senior Care Complex Thesis:</strong> Spatial planning architectural parameters mapping environmental frameworks for senior communities.</li>
+                <li><strong>Qualitative Bathing Disability Research:</strong> Fieldwork and user assessment evaluating environmental hazards and dependencies experienced by elderly cohorts in Hyderabad.</li>
+                <li><strong>Mechanically Adaptive Bed Frame &amp; Furniture:</strong> Prototyping responsive interior nursing bed hardware built to match geriatric dressing and rehabilitation needs.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- CRAFT FUTURES -->
+        <article id="crafts" class="pillar-block">
+          <header class="pillar-header">
+            <h3 class="pillar-title">Craft Futures</h3>
+          </header>
+          <div class="pillar-content">
+            <div class="inquiry-box">
+              <h4>The Inquiry</h4>
+              <p>How do historic craft traditions navigate the pressures of raw material scarcity, industrial automation, and rapid market migration without sacrificing their authentic tacit knowledge or cultural heritage?</p>
+            </div>
+            <div class="evidence-box">
+              <h4>Projects &amp; Selected Works</h4>
+              <p>A multi-year longitudinal field study balancing local ethnographic tracking with design interventions across distinct regional craft ecologies:</p>
+              <ul class="evidence-list">
+                <li><strong>Kondapalli Materials Resilience:</strong> Investigating product diversification, alternative supply loops, and wood-substitution configurations to address systemic forestry shortages.</li>
+                <li><strong>Nakashi Mechanical Integration:</strong> Analyzing spatial and operational friction points between human artisanal hand-carving systems and computational CNC machining paths.</li>
+                <li><strong>Kalamkari Fabric Media Transitions:</strong> Mapping the shifting boundaries of traditional pen methods, regional motifs, and modern block/screen translations.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- FABRICATION & INNOVATION -->
+        <article id="fabrication" class="pillar-block">
+          <header class="pillar-header">
+            <h3 class="pillar-title">Fabrication &amp; Innovation</h3>
+          </header>
+          <div class="pillar-content">
+            <div class="inquiry-box">
+              <h4>The Inquiry</h4>
+              <p>How can digital fabrication processes merge with local, vernacular architectural building systems to form a collaborative design language that balances standard industrial precision with organic site-specific customization?</p>
+            </div>
+            <div class="evidence-box">
+              <h4>Projects &amp; Selected Works</h4>
+              <p>The engineering core of my structural design research, integrating material science with physical prototyping loops to build adaptive construction components.</p>
+              <ul class="evidence-list">
+                <li><strong>A Modular Architectural Screen System:</strong> Engineering geometric screen assemblies (Jaalis) utilizing custom interlocking properties to achieve site-specific light filtering.</li>
+                <li><strong>Gear-Actuated Flexure Casting:</strong> Prototyping variable mechanical mold configurations capable of continuous localized material thickness modifications.</li>
+                <li><strong>System For Forming Three-Dimensional Structures:</strong> Designing modular structural block interlocking frameworks to form complex spatial screens without standard tool dependencies.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- NARRATIVE DESIGN -->
+        <article id="narrative" class="pillar-block">
+          <header class="pillar-header">
+            <h3 class="pillar-title">Narrative Design</h3>
+          </header>
+          <div class="pillar-content">
+            <div class="inquiry-box">
+              <h4>The Inquiry</h4>
+              <p>How can visual frameworks and storytelling structures translate early developmental concepts into media that support childhood literacy and behavioral transition landmarks?</p>
+            </div>
+            <div class="evidence-box">
+              <h4>Commercialized Products &amp; Selected Works</h4>
+              <p>An exploration of publication media acting as cognitive learning frameworks. This practice combines targeted early-childhood text authorship with stylized book architectures.</p>
+              <ul class="evidence-list">
+                <li><strong>ANAGHA’S SHINY LITTLE TEETH (2025):</strong> Published children's book mapping health routines, sensory transitions, and somatic awareness milestones.</li>
+                <li><strong>Anagha Goes to School:</strong> Story structure and text layout addressing early childhood separation anxieties, behavioral adaptation, and classroom transitions.</li>
+                <li><strong>Pippa is the Boss of Her Body:</strong> Book architecture, typography layout, and graphic design mapping early personal agency, boundaries, and safety concepts.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- RESEARCH IDENTITY SECTION -->
+    <section id="research" class="portfolio-section text-content-layout">
+      <div class="container">
+        <h2 class="section-heading">Research</h2>
+        <p class="section-subheading">Theoretical Frameworks &amp; Deep Interests</p>
+
+        <div class="research-layout">
+          <!-- Active Frameworks -->
+          <div class="frameworks-container">
+            <div class="research-card">
+              <span class="meta-label">Theoretical Position</span>
+              <h3>Elastic Vernaculars</h3>
+              <p>An architectural position asserting that traditional regional building knowledge must not remain frozen as an historical artifact. Instead, it must serve as an elastic parameters framework, adapting to contemporary computational logic and resource changes without fracturing its underlying structural intent.</p>
+            </div>
+
+            <div class="research-card">
+              <span class="meta-label">Conceptual Framework</span>
+              <h3>The Fabricational Third Space</h3>
+              <p>The boundary zone where automated, parametric CNC tools intersect with the contextual, variable intuition of human craftsmanship. This framework balances machine precision with human craft variations, creating a synthesis of digital accuracy and artisan authenticity.</p>
+            </div>
+
+            <div class="research-card">
+              <span class="meta-label">Methodological Contribution</span>
+              <h3>IMMA-DBR</h3>
+              <p>An integrated, multi-scalar methodological loop combining systemic site analysis with Design-Based Research (DBR). This structure supports rigorous, cyclic transitions between abstract conceptual theory and empirical, field-tested prototype performance.</p>
+            </div>
+          </div>
+
+          <!-- Interests Panel -->
+          <aside class="interests-panel">
+            <h3>Current Research Interests</h3>
+            <ul class="interests-list">
+              <li>Craft Futures &amp; Regional Resource Resilience</li>
+              <li>Environmental Psychology &amp; Lifespan Architecture</li>
+              <li>Digital Fabrication &amp; Human-Machine Collaboration</li>
+              <li>Design Methodology &amp; Analytical Prototyping</li>
+              <li>Learning Through Design &amp; Narrative Mediums</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING SECTION -->
+    <section id="teaching" class="portfolio-section gray-bg">
+      <div class="container">
+        <h2 class="section-heading">Teaching &amp; Mentoring</h2>
+        <p class="section-subheading">Academic Appointments &amp; Studio Instruction</p>
+        
+        <div class="teaching-grid">
+          <div class="teaching-card">
+            <span class="meta-label">Visiting Faculty</span>
+            <h3>Jawaharlal Nehru Architecture and Fine Arts University</h3>
+            <h4>School of Planning and Architecture (SPA) | 2022</h4>
+            <p>Delivered specialized instruction to undergraduate students within the Bachelor of Design (Interior Design) program. Formulated and taught the core studio curriculum for <strong>Furniture Design (ID17B4.2C)</strong> across 3 comprehensive sessions for IV Semester cohorts, leading modules on human ergonomics, detailing, and materials testing.</p>
+          </div>
+
+          <div class="teaching-card">
+            <span class="meta-label">Guest Professor</span>
+            <h3>Maharani Cluster University</h3>
+            <h4>Department of Science | 2019 – 2020</h4>
+            <p>Appointed to deliver specialized postgraduate instruction for M.Sc. cohorts. Managed syllabus formulation and curriculum review under the Board of Studies (BOS) while delivering technical lectures in <strong>Advanced Building Materials</strong>, <strong>Retail Space Design</strong>, and <strong>Renovation and Restoration</strong>.</p>
+          </div>
+
+          <div class="teaching-card">
+            <span class="meta-label">Guest Professor</span>
+            <h3>Smt. VHD Central Institute of Home Science</h3>
+            <h4>Government of Karnataka | 2019 – 2020</h4>
+            <p>Provided undergraduate-level (B.Sc.) studio training and theoretical instruction within the design division. Taught core subjects covering <strong>Estimation and Costing</strong>, <strong>Project Management Frameworks</strong>, Architectural Drafting, spatial planning, and integrated interior detailing.</p>
+          </div>
+
+          <div class="teaching-card">
+            <span class="meta-label">Assistant Professor</span>
+            <h3>Amity University Gwalior</h3>
+            <h4>Design Division | 2018 – 2019</h4>
+            <p>Held a full faculty appointment executing comprehensive multi-course teaching loads across the B.Design program. Instructed courses in <strong>Sustainable Interiors</strong>, <strong>Interior Project Management</strong>, and <strong>Working Drawings</strong>, while contributing to strategic syllabus revisions as a Board of Studies (BOS) member. Conducted architecture advisory loops for B.Arch cohorts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS & INTELLECTUAL PROPERTY SECTION -->
+    <section id="publications" class="portfolio-section">
+      <div class="container">
+        <h2 class="section-heading">Publications &amp; Patents</h2>
+        <p class="section-subheading">Verified Academic Records &amp; Intellectual Property Filings</p>
+        
+        <div class="publications-wrapper">
+          <!-- Literature Categories -->
+          <div class="literature-column">
+            <div class="pub-category">
+              <h3>Book Chapters</h3>
+              <ul class="pub-list">
+                <li>Gogulapati, S., &amp; Keshavan, N. (2025). Perceptual Differentiation: Diagrammatic Explorations of the Contemporary-Vernacular Discourse. In A. Chakrabarti, V. Singh, P. S. Onkar, &amp; M. Shahid (Eds.), <em>Responsible and Resilient Design for Society, Volume 4</em> (pp. 519–XXX). Springer Nature. <span class="serial-no">eBook ISBN: 978-981-96-5495-6 / Print ISBN: 978-981-96-5494-9</span></li>
+                <li>Sreeprada Gogulapati &amp; Neelakantan Keshavan. (2023). Developing Spatial Patterned Products for Buildings. In M. Schalk, K. Reisinger, E. Markus, &amp; U. Leconte (Eds.), <em>Material Practices: Positionality, Methodology and Ethics</em> (pp. 18/35). TUM School of Engineering and Design.</li>
+              </ul>
+            </div>
+
+            <div class="pub-category">
+              <h3>Conference Proceedings</h3>
+              <ul class="pub-list">
+                <li>Gogulapati, S. (2019, March 15–16). <em>Impact of CNC Machines on Nakashi Craft of Ahmedabad</em> [Paper presentation]. National Conference for Emerging Trends in Architecture, Ahmedabad, India.</li>
+                <li>Gogulapati, S. (2019, December). <em>Qualitative Study on the Bathing Disability Experienced by the Elderly People of Hyderabad</em> [Paper presentation]. International Conference, HWWE 2019, Hyderabad, India.</li>
+              </ul>
+            </div>
+
+            <div class="pub-category">
+              <h3>Exhibitions</h3>
+              <ul class="pub-list">
+                <li>Technical University of Munich. (2023). <em>AJA Exhibition</em> [Exhibition]. Technical University of Munich, Munich, Germany.</li>
+              </ul>
+            </div>
+
+            <div class="pub-category">
+              <h3>Published Children's Literature</h3>
+              <ul class="pub-list">
+                <li>Kshipra. (2025). <em>ANAGHA’S SHINY LITTLE TEETH</em>. Independently published. <span class="serial-no">ISBN-13: 979-8264000911 / ISBN: 9798264006029</span></li>
+                <li>Kshipra. (Forthcoming). <em>Anagha Goes to School</em>. Independently published. <span class="serial-no">ISBN: 9798184340531 (KDP Registry Archive)</span></li>
+                <li>Sreeprada, G. (2025). <em>Pippa is the Boss of Her Body</em>. Narrative &amp; Somatic Agency Press.</li>
+              </ul>
+            </div>
+            
+            <div class="pub-category">
+              <h3>Vector &amp; Graphic Design</h3>
+              <ul class="pub-list">
+                <li>Gogulapati, S. (2025). Brewing creativity: 15 coffee-themed line art illustrations [Vector art]. Gumroad. Retrieved from https://sreeprada.gumroad.com/l/coffee</li>
+                <li>Gogulapati S. (2025). Manickam: Traditional chola lamp [Vector art]. Gumroad. Retrieved from https://sreeprada.gumroad.com/l/vfczc</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Intellectual Property Side Panel -->
+          <div class="patents-column">
+            <div class="interests-panel">
+              <h3>Patents &amp; Design Registrations</h3>
+              <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--color-secondary);">A substantial record of eight national industrial design registrations and full patent applications covering utility innovations in modular mechanics, adaptive structural panels, and tactile educational design systems.</p>
+              
+              <h4 style="font-size:0.85rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.75rem; color:var(--color-accent);">Design Patents / Registrations</h4>
+              <ul class="patent-list" style="margin-bottom: 2rem;">
+                <li>Gogulapati Sreeprada, Neelakantan Keshavan, Santosh Thorat, Irfanali M Saiyed, Indian Institute of Technology Hyderabad. <em>Modular Mould – Female Block</em>. Indian Design Application No. 464166-001, filed July 1, 2025.</li>
+                <li>Gogulapati Sreeprada, Neelakantan Keshavan, Santosh Thorat, Irfanali M Saiyed, Indian Institute of Technology Hyderabad. <em>Modular Mould – Male Block</em>. Indian Design Application No. 464167-001, filed July 1, 2025.</li>
+                <li>Gogulapati Sreeprada, Neelakantan Keshavan, B Vivekananda Chary, Indian Institute of Technology Hyderabad. <em>Modular Triangular Screen System – Female Interlocking Block</em>. Indian Design Application No. 460739-001, filed May 30, 2025.</li>
+                <li>Gogulapati Sreeprada, Neelakantan Keshavan, B Vivekananda Chary, Indian Institute of Technology Hyderabad. <em>Modular Triangular Screen System – Male Interlocking Block</em>. Indian Design Application No. 460740-001, filed May 30, 2025.</li>
+                <li>Gogulapati Sreeprada, Neelakantan Keshavan, Santosh Thorat, Maruvada Samrat, Indian Institute of Technology Hyderabad. <em>Educational Puzzle</em>. Indian Design Application No. 464517-001, filed July 4, 2025.</li>
+              </ul>
+
+              <h4 style="font-size:0.85rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.75rem; color:var(--color-accent);">Product Patents</h4>
+              <ul class="patent-list">
+                <li>Indian Institute of Technology Hyderabad, inventors Gogulapati Sreeprada, Neelakantan Keshavan, Santosh Thorat, Maruvada Veera Venkata Naga Samrat, B Vivekananda Chary. <em>A Modular Architectural Screen System</em>. Patent Application No. 202541079957, filed August 22, 2025.</li>
+                <li>Indian Institute of Technology Hyderabad, inventors Gogulapati Sreeprada, Neelakantan Keshavan, Santosh Thorat, Maruvada Veera Venkata Naga Samrat, Sai Yagnamurthy. <em>A Gear Actuated Flexure Casting System for a Continuous Adjustment in Void Ratio of Materials</em>. Patent Application No. 202541079948, filed August 22, 2025.</li>
+                <li>Indian Institute of Technology Hyderabad, inventors Gogulapati Sreeprada, Neelakantan Keshavan, Santosh Thorat, Maruvada Veera Venkata Naga Samrat. <em>System For Forming Three-Dimensional Geometric Or Free-Form Structures And Method Of Assembling The Same</em>. Indian Patent Application No. 202541081620, filed August 28, 2025.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV & CONTACT SECTION -->
+    <section id="cv-contact" class="portfolio-section gray-bg">
+      <div class="container">
+        <h2 class="section-heading">CV &amp; Contact</h2>
+        <p class="section-subheading">Institutional Coordinates &amp; Networks</p>
+
+        <div class="cv-grid">
+          <div class="cv-info">
+            <h3>Current</h3>
+            <p><strong>PhD Scholar &amp; Prime Minister's Research Fellow (PMRF)</strong><br>Greenko School of Sustainability<br>Indian Institute of Technology Hyderabad<br>Kandi, Sangareddy, Telangana — 502285</p>
+            
+            <div class="contact-links-block">
+              <h3>Academic Correspondence</h3>
+              <p>For collaborative design inquiries, peer reviews, or pedagogical requests, correspond via: </p>
+              <p style="margin-top: 1rem;">Primary Inbox: <a href="mailto:gogulapati.sreeprada@alum.cept.ac.in" class="text-link">gogulapati.sreeprada@alum.cept.ac.in</a></p>
+              <p>Institutional Mail: <a href="mailto:md20resch11001@iith.ac.in" class="text-link">md20resch11001@iith.ac.in</a></p>
+              <p>Global Directory: <a href="https://gsreeprada.github.io" target="_blank" class="text-link">gsreeprada.github.io</a></p>
+              <p>Professional Network: <a href="https://www.linkedin.com/in/goguapati-sreeprada" target="_blank" class="text-link">linkedin.com/in/goguapati-sreeprada</a></p>
+            </div>
+          </div>
+
+          <div class="cv-highlights">
+            <h3>Education &amp; Background Certifications</h3>
+            <table class="cv-table">
+              <tr>
+                <td>2020 – Present</td>
+                <td>PhD Scholar in Sustainable Design &amp; Fabrication Systems, IIT Hyderabad (9.75 CGPA Scholar)</td>
+              </tr>
+              <tr>
+                <td>2016 – 2018</td>
+                <td>Master's Degree in Interior Architecture &amp; Design, CEPT University (Specialization in Building Energy Efficiency &amp; Craft Systems)</td>
+              </tr>
+              <tr>
+                <td>2012 – 2016</td>
+                <td>Bachelor of Design (Interior Design), Jawaharlal Nehru Architecture and Fine Arts University</td>
+              </tr>
+              <tr>
+                <td>Honors</td>
+                <td>Prime Minister's Research Fellowship (PMRF) Award Recipient</td>
+              </tr>
+              <tr>
+                <td>Certifications</td>
+                <td>Master of Science (M.Sc.) in Psychology • Professional Crisis Counseling • Active Listening Level-4</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Gogulapati Sreeprada. Portfolio framed systematically around parallel inquiries and tracked empirical evidence loops. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
